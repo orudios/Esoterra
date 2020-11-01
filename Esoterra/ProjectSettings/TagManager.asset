@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Interactable World Space Text
+    uniqueID: 3697183979
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

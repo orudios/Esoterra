@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LiberationSans SDF - Metalic Green
-  m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
+  m_Shader: {fileID: 4800000, guid: dd89cf5b9246416f84610a006f916af7, type: 3}
   m_ShaderKeywords: BEVEL_ON GLOW_ON OUTLINE_ON UNDERLAY_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -32,8 +32,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 28684132378477856, guid: 8f586378b4e144a9851e7b34d9b748ee,
-          type: 2}
+        m_Texture: {fileID: 28684132378477856, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
@@ -50,6 +49,7 @@ Material:
     - _BumpFace: 0
     - _BumpOutline: 0
     - _ColorMask: 15
+    - _CullMode: 0
     - _Diffuse: 0
     - _FaceDilate: 0.15
     - _FaceUVSpeedX: 0
@@ -65,12 +65,12 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.219
+    - _OutlineWidth: 0
     - _PerspectiveFilter: 0
     - _Reflectivity: 12.76
     - _ScaleRatioA: 0.9
-    - _ScaleRatioB: 0.6525
-    - _ScaleRatioC: 0.6525
+    - _ScaleRatioB: 0.59624994
+    - _ScaleRatioC: 0.59624994
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -94,11 +94,12 @@ Material:
     m_Colors:
     - _ClipRect: {r: -10000, g: -10000, b: 10000, a: 10000}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 0, g: 0.75735635, b: 0, a: 1}
-    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
+    - _FaceColor: {r: 0, g: 1.1332245, b: 1.319508, a: 1}
+    - _GlowColor: {r: 0, g: 0.8143573, b: 1, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 100000, a: 100000}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 0.7689687, g: 1, b: 0.75000346, a: 1}
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_BuildTextureStacks: []
