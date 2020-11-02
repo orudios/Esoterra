@@ -8,15 +8,21 @@ public class DoorController : MonoBehaviour
     private AudioSource[] audioSources;
     private AudioSource doorOpenSound;
     private AudioSource doorCloseSound;
-    private bool doorOpen = false;    
+    private bool doorOpen = false;  
+
     private void Awake()
     {
-        audioSources = gameObject.GetComponents<AudioSource>();
-
-        doorOpenSound = audioSources[0];
-        doorCloseSound = audioSources[1];
-
         doorAnimation = gameObject.GetComponent<Animator>();
+    }
+
+    void Start()
+    {
+        audioSources = gameObject.GetComponents<AudioSource>();
+        if (audioSources.Length == 2)
+        {
+            doorOpenSound = audioSources[0];
+            doorCloseSound = audioSources[1];
+        }
     }
 
     public void PlayAnimation()
