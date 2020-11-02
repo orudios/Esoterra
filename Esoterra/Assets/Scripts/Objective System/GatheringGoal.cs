@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class CombatGoal : Goal
+public class GatheringGoal : Goal
 {
-    public int TrackingEnemyID {get; set;}
+    public int TrackingResourceID {get; set;}
 
-    public CombatGoal(Objective objective, int trackingEnemyID, string description, int requiredAmount, int currentAmount, bool completed)
+    public GatheringGoal(Objective objective, int trackingResourceID, string description, int requiredAmount, int currentAmount, bool completed)
     {
         this.Objective = objective;
-        this.TrackingEnemyID = trackingEnemyID;
+        this.TrackingResourceID = trackingResourceID;
 
         this.Description = description;
         this.RequiredAmount = requiredAmount;
@@ -22,13 +22,12 @@ public class CombatGoal : Goal
     {
         base.Create();
 
-        // TODO listener for goal subtype events
-        // EventController.OnEnemyDeath += EnemyDied;
+        // EventController.OnResourceGather += ResourceGathered;
     }
 
-    public void EnemyDied(IEnemy enemy)
+    public void ResourceGathered(IResource resource)
     {
-        if (enemy.ID == this.TrackingEnemyID)
+        if (resource.ID == this.TrackingResourceID)
         {
             this.CurrentAmount++;
             CheckGoalCompleted();

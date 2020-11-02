@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class Alien : MonoBehaviour, IEnemy
 {
-    public int ID {get; set;}
+    public int ID {get; set;}  // initialise in Start()
     public float currentHealth;
     public float maxHealth;
     public int strengthLevel;

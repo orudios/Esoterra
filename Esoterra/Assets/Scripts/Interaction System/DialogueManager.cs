@@ -169,7 +169,6 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueUI.SetActive(true);
         inDialogue = true;
-
         currentPlayerResponse = 0;
         interactableNameText.text = interactable.displayName;
         interactableDialogueText.text = interactable.interactableDialogue[0];
@@ -180,12 +179,6 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueUI.SetActive(false);
         inDialogue = false;
-
         currentPlayerResponse = 0;
-
-        if (gameObject.GetComponent<ObjectiveProvider>() != null)
-        {
-            gameObject.GetComponent<ObjectiveProvider>().AssignObjective();
-        }
     }
 }
