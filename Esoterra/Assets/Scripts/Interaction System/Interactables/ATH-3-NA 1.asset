@@ -15,22 +15,28 @@ MonoBehaviour:
   displayName: ATH-3-NA
   interactionVerb: Talk
   interactableDialogue:
-  - 'Hello. I am ATH-3-NA. I am here to assist you on Olympus.
+  - 'ATH-3-NA... Rebooting...
 
+    ATH-3-NA online.
 
-    Use [mouse wheel]
-    to scroll through response options.
+    Currently we are orbiting:
+    Esoterra.
 
-    Press [R] to select a response option.
+    Olympus structural integrity is: Compromised.'
+  - 'Pressing [E] will start and end interactions with objects in the world.
 
-    Press
-    [E] to start and exit dialogues.'
-  - I was programmed to be mostly neutral.
-  - I am Artificial Intelligence, created on the same site where Olympus was built.
-    I will guide you with your objectives and tell you about the current status of
-    Olympus.
-  - Goodbye. Press [E] to exit dialogues.
+    Pressing
+    [R] will allow you to select a dialogue option.
+
+    Using [Mouse Wheel] will
+    scroll through response options.
+
+    Clicking [Left Mouse] will shoot an attack.'
+  - I am the Artificial Intelligence ATH-3-NA, created on the same site where our
+    ship Olympus was built. I will guide you with your objectives and tell you about
+    the current status of Olympus.
+  - Goodbye.
   playerDialogue:
-  - How are you?
-  - What are you?
-  - Bye.
+  - Remind me of the game controls. [R]
+  - Who are you? [R]
+  - Bye. [R]

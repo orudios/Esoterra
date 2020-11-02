@@ -15,6 +15,7 @@ public class FlickeringLight : MonoBehaviour
         FlickerLight();
     }
 
+    // Code governing light flickering. Defines a random number for the flickerTimer that decrements and shuts the lights off/on accordingly
     void FlickerLight() 
     {
         if (flickerTimer > 0)
