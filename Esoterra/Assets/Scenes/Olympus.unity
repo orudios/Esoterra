@@ -14274,7 +14274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &928775363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32639,13 +32639,17 @@ PrefabInstance:
       propertyPath: playerJumpHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9188428941424209041, guid: 9086e8445b81a754c8a1dcc2e969fdd6, type: 3}
+      propertyPath: playerSpeed
+      value: 5.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9188428941424209052, guid: 9086e8445b81a754c8a1dcc2e969fdd6, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 9188428941424209054, guid: 9086e8445b81a754c8a1dcc2e969fdd6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9188428941424209054, guid: 9086e8445b81a754c8a1dcc2e969fdd6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -32653,7 +32657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9188428941424209054, guid: 9086e8445b81a754c8a1dcc2e969fdd6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9188428941424209054, guid: 9086e8445b81a754c8a1dcc2e969fdd6, type: 3}
       propertyPath: m_LocalRotation.x
@@ -32690,6 +32694,10 @@ PrefabInstance:
     - target: {fileID: 9188428941424209055, guid: 9086e8445b81a754c8a1dcc2e969fdd6, type: 3}
       propertyPath: m_Center.y
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188428942403667630, guid: 9086e8445b81a754c8a1dcc2e969fdd6, type: 3}
+      propertyPath: mouseSensitivity
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 9188428943020218191, guid: 9086e8445b81a754c8a1dcc2e969fdd6, type: 3}
       propertyPath: m_LocalPosition.y
