@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Cube
   m_EditorClassIdentifier: 
   displayName: Cube
-  interactionVerb: Receive Objective
+  interactionVerb: Interact
   interactableDialogue:
   - It's a cube. It doesn't seem to do much on it's own.
-  - The cube has given you an objective.
+  - The cube doesn't budge.
   playerDialogue:
-  - Get an objective.
+  - Try to move it.
