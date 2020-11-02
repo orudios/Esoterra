@@ -2,6 +2,7 @@
 
 public class CollateralDamage : MonoBehaviour
 {
+    // Simple script to enable any object in the world to take damage from weapons
     public float targetHealth = 50f;
     
     public void takeDamage(float damage)
