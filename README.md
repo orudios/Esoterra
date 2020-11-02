@@ -21,6 +21,9 @@
 - [ATH-3-NA Voice](https://texttospeechrobot.com/texttospeechdownloadmp3.html)
 - [Décompression.wav](https://freesound.org/people/davidou/sounds/88495/)
 
+### Fonts
+- [Nasalization](https://www.dafont.com/nasalization.font)
+
 ### Misc.
 - [NavMeshComponents](https://github.com/Unity-Technologies/NavMeshComponents)
 - [Sci-Fi Weapons](https://devassets.com/assets/sci-fi-weapons/)
