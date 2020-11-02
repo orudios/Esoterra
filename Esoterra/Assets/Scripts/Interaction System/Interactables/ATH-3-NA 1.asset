@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b834edad4c89a438c59369de32bb5d, type: 3}
+  m_Name: ATH-3-NA 1
+  m_EditorClassIdentifier: 
+  displayName: ATH-3-NA
+  interactionVerb: Talk
+  interactableDialogue:
+  - 'Hello. I am ATH-3-NA. I am here to assist you on Olympus.
+
+
+    Use [mouse wheel]
+    to scroll through response options.
+
+    Press [R] to select a response option.
+
+    Press
+    [E] to start and exit dialogues.'
+  - I was programmed to be mostly neutral.
+  - I am Artificial Intelligence, created on the same site where Olympus was built.
+    I will guide you with your objectives and tell you about the current status of
+    Olympus.
+  - Goodbye. Press [E] to exit dialogues.
+  playerDialogue:
+  - How are you?
+  - What are you?
+  - Bye.
