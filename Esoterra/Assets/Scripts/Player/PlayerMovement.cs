@@ -8,11 +8,12 @@ public class PlayerMovement : MonoBehaviour
 
     public float playerSpeed = 12f;
     public float gravityConstant = -9.81f;
-    public float playerJumpHeight = 3f;
+    public float playerJumpHeight = 1f;
+    public float playerSprintBoost = 2.2f;
 
     public Transform groundChecker;
     public float groundDistance = 0.4f;
-    public LayerMask groundMask;
+    public LayerMask groundIndicator;
 
     Vector3 playerVelocity;
     bool grounded;
@@ -24,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        grounded = Physics.CheckSphere(groundChecker.position, groundDistance, groundMask);
+        grounded = Physics.CheckSphere(groundChecker.position, groundDistance, groundIndicator);
 
         if (grounded && playerVelocity.y < 0)
         {
@@ -40,11 +41,11 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && grounded)
         {
+            Debug.Log("Jumped.");
             playerVelocity.y = Mathf.Sqrt(playerJumpHeight * -2f * gravityConstant);
         }
 
         playerVelocity.y += gravityConstant * Time.deltaTime;
-
         controller.Move(playerVelocity * Time.deltaTime);
     }
 }

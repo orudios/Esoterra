@@ -38,7 +38,7 @@ public class DoorRaycast : MonoBehaviour
 
                 if (Input.GetKeyDown(openDoorKey))
                 {
-                    rayCastObj = GameObject.Find("medbay_door").GetComponent<DoorController>();
+                    rayCastObj = GameObject.Find("crewquarters_door").GetComponent<DoorController>();
                     rayCastObj.PlayAnimation();
                 }
             }
