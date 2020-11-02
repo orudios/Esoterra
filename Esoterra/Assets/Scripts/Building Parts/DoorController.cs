@@ -18,6 +18,7 @@ public class DoorController : MonoBehaviour
         {
             // doorAnimation.Play("glass_door_open", 0, 0.0f);
             doorAnimation.SetBool("door_open", true);
+            gameObject.GetComponent<AudioSource>().Play();
             doorOpen = true;
         }
         else
