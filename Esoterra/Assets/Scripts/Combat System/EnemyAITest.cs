@@ -22,15 +22,18 @@ public class EnemyAITest : MonoBehaviour
 
     private void Awake()
     {
+        // Initialises the player object locally + enemy
         player = GameObject.FindWithTag("Player").transform;
         enemy = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
     {
+        // Boolean check fields to determine whether player is within enemy vision/attack range
         playerWithinVision = Physics.CheckSphere(transform.position, visionRange, playerIndicator);
         playerWithinAttackRange = Physics.CheckSphere(transform.position, attackRange, playerIndicator);
 
+        // Appropriate enemy actions based on boolean check field permutations
         if (!playerWithinVision && !playerWithinAttackRange) EnemyPatrol();
         if (playerWithinVision && !playerWithinAttackRange) EnemyChasePlayer();
         if (playerWithinVision && playerWithinAttackRange) EnemyAttackPlayer();
@@ -99,13 +102,5 @@ public class EnemyAITest : MonoBehaviour
     void Death()
     {
         Destroy(gameObject);
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, visionRange);
     }
 }

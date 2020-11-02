@@ -16,6 +16,7 @@ public class GunController : MonoBehaviour
         }
     }
 
+    // Code governing weapon shooting using Raycast
     void ShootWeapon()
     {
         muzzleFlash.Play();
@@ -24,7 +25,9 @@ public class GunController : MonoBehaviour
         if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
+            // Defines a target that has been hit based on the EnemyAITest script
             EnemyAITest target = hit.transform.GetComponent<EnemyAITest>();
+            // Additionally checks if any world objects have been shot to destroy them if necessary
             CollateralDamage nonEnemyTarget = hit.transform.GetComponent<CollateralDamage>();
 
             if (target != null)
