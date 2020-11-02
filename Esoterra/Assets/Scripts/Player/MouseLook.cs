@@ -7,13 +7,14 @@ public class MouseLook : MonoBehaviour
     public Transform playerBody;
     private float xRotation = 0f;
     public float mouseSensitivity = 100f;
-    // Start is called before the first frame update
+
+    // Locks the cursor to the game view inside Unity to prevent it from escaping
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
+    // Code that enables 3D first person camera movement
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;

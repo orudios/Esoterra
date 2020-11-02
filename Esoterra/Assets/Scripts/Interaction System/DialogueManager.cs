@@ -29,11 +29,13 @@ public class DialogueManager : MonoBehaviour
     GameObject player;
 
     float distanceToInteractable;
-    float interactionDistance = 3f;
+    float interactionDistance = 6f;
 
-    bool inDialogue = false;
+    [HideInInspector] public bool inDialogue = false;
     float currentPlayerResponse = 0;
     int numPlayerResponses;
+
+    private AudioSource _audio;
 
 
     void Start()
@@ -49,6 +51,8 @@ public class DialogueManager : MonoBehaviour
         });
 
         InitialiseWorldText();
+
+        _audio = gameObject.GetComponent<AudioSource>();
     }
 
 
@@ -87,6 +91,7 @@ public class DialogueManager : MonoBehaviour
         // Player is too far from Interactable
         if(distanceToInteractable > interactionDistance)
         {
+            if (inDialogue) ExitDialogue();
             SetActiveObjects(false, new GameObject[] {
                 worldNameText.gameObject,
                 worldInteractionText.gameObject
@@ -167,6 +172,11 @@ public class DialogueManager : MonoBehaviour
 
     void StartDialogue()
     {
+        if (gameObject.tag == "Athena")
+        {
+            _audio.Play();
+        }
+
         dialogueUI.SetActive(true);
         inDialogue = true;
         currentPlayerResponse = 0;

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DoorRaycast : MonoBehaviour
 {
+    // Code governing door operation right outside the initial spawn room
+    // Utilising Raycasting to detect when Mouse is on the door
     [SerializeField] private int rayLength = 5;
     [SerializeField] private LayerMask layerMaskInteract;
     [SerializeField] private string excludeLayerName = null;
@@ -18,18 +20,22 @@ public class DoorRaycast : MonoBehaviour
 
     private void Update()
     {
+        // Local reference to RaycastHit
         RaycastHit hit;
         Vector3 forward = transform.TransformDirection(Vector3.forward);
 
+        // Checks for specified LayerMask including potential layer exclusions
         int mask = 1 << LayerMask.NameToLayer(excludeLayerName) | layerMaskInteract.value;
 
         if (Physics.Raycast(transform.position, forward, out hit, rayLength, mask))
         {
+            // Checks if hit collider meets a specified tag
             if (hit.collider.CompareTag(interactableTag))
             {
                 if (!doOnce)
                 {
                     rayCastObj = hit.collider.gameObject.GetComponent<DoorController>();
+                    // Calls function to change crosshair to correspond to intractable door that is hovered over with the camera
                     AdjustCrosshair(true);
                 }
 
@@ -38,7 +44,7 @@ public class DoorRaycast : MonoBehaviour
 
                 if (Input.GetKeyDown(openDoorKey))
                 {
-                    rayCastObj = GameObject.Find("medbay_door").GetComponent<DoorController>();
+                    rayCastObj = GameObject.Find("crewquarters_door").GetComponent<DoorController>();
                     rayCastObj.PlayAnimation();
                 }
             }
@@ -56,6 +62,7 @@ public class DoorRaycast : MonoBehaviour
 
     void AdjustCrosshair(bool on)
     {
+        // Code governing crosshair colour change
         if (on && !doOnce)
         {
             crosshair.color = Color.red;
