@@ -182,5 +182,10 @@ public class DialogueManager : MonoBehaviour
         inDialogue = false;
 
         currentPlayerResponse = 0;
+
+        if (gameObject.GetComponent<ObjectiveProvider>() != null)
+        {
+            gameObject.GetComponent<ObjectiveProvider>().AssignObjective();
+        }
     }
 }

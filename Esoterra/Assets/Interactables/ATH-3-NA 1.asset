@@ -21,7 +21,10 @@ MonoBehaviour:
     Use [mouse wheel]
     to scroll through response options.
 
-    Press [R] to select a response option.'
+    Press [R] to select a response option.
+
+    Press
+    [E] to start and exit dialogues.'
   - I was programmed to be mostly neutral.
   - I am Artificial Intelligence, created on the same site where Olympus was built.
     I will guide you with your objectives and tell you about the current status of
