@@ -4,7 +4,6 @@ using System.Linq;
 using UnityEngine;
 
 
-[System.Serializable]
 public class Objective
 {
     public List<Goal> Goals {get; set;} = new List<Goal>();
