@@ -8,6 +8,7 @@ TagManager:
   - PlayerController
   - Enemy
   - Athena
+  - Gun
   layers:
   - Default
   - TransparentFX
