@@ -19,12 +19,19 @@ public class EnemyAITest : MonoBehaviour
     public bool playerWithinVision, playerWithinAttackRange;
     bool walkingPathSpecified;
     bool attackExecuted;
+    CharacterController controller;
+    Animator animator;
 
     private void Awake()
     {
         // Initialises the player object locally + enemy
         player = GameObject.FindWithTag("Player").transform;
         enemy = GetComponent<NavMeshAgent>();
+
+        // Initialise the animation controller for the enemy
+        controller=GetComponent<CharacterController>();
+        animator=GetComponent<Animator>();
+
     }
 
     private void Update()
@@ -37,13 +44,17 @@ public class EnemyAITest : MonoBehaviour
         if (!playerWithinVision && !playerWithinAttackRange) EnemyPatrol();
         if (playerWithinVision && !playerWithinAttackRange) EnemyChasePlayer();
         if (playerWithinVision && playerWithinAttackRange) EnemyAttackPlayer();
+
+        
     }
 
     private void EnemyPatrol()
     {
+
         if (!walkingPathSpecified) AcquireWalkingPath();
         if (walkingPathSpecified)
         {
+            
             enemy.SetDestination(walkingPath);
         }
 
@@ -65,6 +76,7 @@ public class EnemyAITest : MonoBehaviour
 
     private void EnemyChasePlayer()
     {
+        animator.SetInteger("condition", 1);
         enemy.SetDestination(player.position);
     }
 
@@ -72,14 +84,13 @@ public class EnemyAITest : MonoBehaviour
     {
         enemy.SetDestination(transform.position);
         transform.LookAt(player);
-
         if (!attackExecuted)
         {
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
 
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);  
-
+            //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            //rb.AddForce(transform.up * 8f, ForceMode.Impulse);  
+            animator.SetInteger("condition", 2);
             attackExecuted = true;
             Invoke(nameof(EnemyResetAttack), attackTimeDelta);
         }
