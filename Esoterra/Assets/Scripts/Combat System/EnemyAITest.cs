@@ -114,4 +114,9 @@ public class EnemyAITest : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        
+    }
 }
