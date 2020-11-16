@@ -83,7 +83,7 @@ public class EnemyAITest : MonoBehaviour
     private void EnemyAttackPlayer()
     {
         enemy.SetDestination(transform.position);
-        transform.LookAt(player);
+        transform.LookAt(player,Vector3.down);
         if (!attackExecuted)
         {
             //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
@@ -118,5 +118,10 @@ public class EnemyAITest : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+
     }
 }
