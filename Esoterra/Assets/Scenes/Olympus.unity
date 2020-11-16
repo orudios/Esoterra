@@ -25405,9 +25405,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1782845154759723343, guid: 3cd6fec2fcb5eb24bb9c6f33e5f65349, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8934591019288936244, guid: 3cd6fec2fcb5eb24bb9c6f33e5f65349, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934591019288936244, guid: 3cd6fec2fcb5eb24bb9c6f33e5f65349, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9058307464074183598, guid: 3cd6fec2fcb5eb24bb9c6f33e5f65349, type: 3}
       propertyPath: player
@@ -27220,7 +27228,7 @@ MonoBehaviour:
   projectile: {fileID: 0}
   walkingPathRange: 5
   attackTimeDelta: 0.5
-  visionRange: 50
+  visionRange: 25
   attackRange: 1
   targetHealth: 30
   playerWithinVision: 0
@@ -27235,8 +27243,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
-  m_Acceleration: 11
+  m_Speed: 1
+  m_Acceleration: 1
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -27244,9 +27252,37 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 0.3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &1743223025
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743223022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.2
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.8, z: 0}
+--- !u!64 &1743223028
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743223022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 9209204109229201293, guid: 08750cce284416a4a9aaf31e826fe626, type: 3}
 --- !u!4 &1744798492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 433578, guid: 4e32615977c0a9f4688fa0d66b0a93e5, type: 3}
@@ -33706,6 +33742,14 @@ PrefabInstance:
     - target: {fileID: 1428659184559766981, guid: 3cd6fec2fcb5eb24bb9c6f33e5f65349, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782845154759723343, guid: 3cd6fec2fcb5eb24bb9c6f33e5f65349, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450998785469015898, guid: 3cd6fec2fcb5eb24bb9c6f33e5f65349, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8934591019288936244, guid: 3cd6fec2fcb5eb24bb9c6f33e5f65349, type: 3}
       propertyPath: m_Name
