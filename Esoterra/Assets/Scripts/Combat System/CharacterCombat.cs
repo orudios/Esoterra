@@ -7,6 +7,9 @@ public class CharacterCombat : MonoBehaviour
 {
     CharacterStats myStats;
 
+    public float attackSpeed = 1f;
+    //prevents repeated attack
+    
     void Start(){
         myStats=GetComponent<CharacterStats>();
 

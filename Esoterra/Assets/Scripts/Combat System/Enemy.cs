@@ -9,7 +9,7 @@ public class Enemy : InteractableEnemy
     CharacterStats myStats;
     void Start(){
         playerManager=PlayerManager.instance;
-        myStats = GetComponent<CharacterStats>()
+        myStats = GetComponent<CharacterStats>();
     }
    public override void Interact(){
        base.Interact();
@@ -17,7 +17,7 @@ public class Enemy : InteractableEnemy
 
        CharacterCombat playerCombat =  playerManager.player.GetComponent<CharacterCombat>();
        if (playerCombat !=null){
-           playerCombat.Attack(myStats)
+           playerCombat.Attack(myStats);
        }
    }
 
