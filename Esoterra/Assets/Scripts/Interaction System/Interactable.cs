@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 
 public class Interactable : MonoBehaviour
 {
+    [Header("Controls")]
+    public string keyInteract = "e";
+
     [Header("Interactable Details")]
     [Tooltip("A human-readable name displayed to the player.")]
     public string displayName;
     [Tooltip("What the player will do with this Interactable.")]
     public string interactionVerb;
-    [Tooltip("How close the player needs to be to be able to interact.")]
+    [Tooltip("How close the player needs to be in order to interact.")]
     [Range(2.0f, 8.0f)]
     public float interactionDistance = 5f;
 
@@ -20,77 +22,50 @@ public class Interactable : MonoBehaviour
     public TMP_Text displayNameText;
     public TMP_Text interactionVerbText;
 
-    // Controls
-    string controlInteract = "e";
-
     // Player
-    GameObject player;
+    PlayerController playerController;
     float playerDistance;
-    
-    // Crosshair
-    Image crosshair;
-    RaycastHit hit;
 
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        crosshair = GameObject.Find("Crosshair").GetComponent<Image>();
-
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+		
         SetWorldSpaceText();
+    }
+
+    void Update()
+    {
+        ToggleWorldSpaceText();
+
+        if (CanInteract() && Input.GetKeyDown(keyInteract)) {
+            Interact();
+        }
     }
 
     void SetWorldSpaceText()
     {
         displayNameText.GetComponent<TextMeshPro>().text = displayName;
         interactionVerbText.GetComponent<TextMeshPro>().text =
-            interactionVerb + " [" + controlInteract.ToUpper() + "]";
+            interactionVerb + " [" + keyInteract.ToUpper() + "]";
     }
 
-    void Update()
+    // Show or hide name and verb above interactables in the world
+    void ToggleWorldSpaceText()
     {
-        TryInteract();
-    }
-
-    void TryInteract()
-    {
-        if (PlayerInRange()) {
-
-            // Show the world space text for this interactable
+        if (PlayerInRange())
+        {
             SetActiveObjects(true, new GameObject[] {
                 displayNameText.gameObject,
                 interactionVerbText.gameObject
             });
-
-            // If the player is looking at an interactable
-            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit)) {
-                if (hit.transform.gameObject.tag == "Interactable") {
-                    crosshair.color = Color.red;
-                    Debug.Log(hit.transform.name);
-                }
-                else {
-                    crosshair.color = Color.white;
-                }
-            }
-
         }
-        // Player not in range
-        else {
+        else
+        {
             SetActiveObjects(false, new GameObject[] {
                 displayNameText.gameObject,
                 interactionVerbText.gameObject
             });
-        }
-    }
-
-    // Check if player is close enough to interact
-    bool PlayerInRange()
-    {
-        playerDistance = Vector3.Distance(this.transform.position, player.transform.position);
-        if (playerDistance <= interactionDistance) {
-            return true;
-        } else {
-            return false;
         }
     }
 
@@ -100,6 +75,26 @@ public class Interactable : MonoBehaviour
         foreach (GameObject obj in objects){
             obj.SetActive(boolean);
         }
+    }
+
+    // Check if the player is close enough to this interactable
+    public bool PlayerInRange()
+    {
+        // Here, gameObject refers to this interactable
+        playerDistance = playerController.DistanceTo(gameObject);
+        if (playerDistance <= interactionDistance) {
+            return true;
+        }
+        return false;
+    }
+
+    // Return true if player is in range and looking at interactable
+    public bool CanInteract()
+    {
+        if (PlayerInRange() && playerController.LookingAt() == gameObject) {
+            return true;
+        }
+        return false;
     }
 
     public virtual void Interact()
