@@ -8,6 +8,7 @@ TagManager:
   - PlayerController
   - Enemy
   - Athena
+  - Interactable
   layers:
   - Default
   - TransparentFX
