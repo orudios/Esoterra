@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 136368287}
     m_Modifications:
+    - target: {fileID: 129374, guid: 496fa247adc61d44ebaeaf9d72671287, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 167654, guid: 496fa247adc61d44ebaeaf9d72671287, type: 3}
       propertyPath: m_Name
       value: ATH-3-NA
@@ -871,10 +875,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyInteract: e
-  displayName: Green Cube
-  interactionVerb: Talk..?
   interactionDistance: 5
+  outlineObject: {fileID: 730228789}
+  displayName: Green Cube
   displayNameText: {fileID: 672879941}
+  interactionVerb: Talk..?
   interactionVerbText: {fileID: 399867076}
 --- !u!65 &730228792
 BoxCollider:
@@ -1351,10 +1356,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyInteract: e
+  interactionDistance: 7
+  outlineObject: {fileID: 2098158837}
   displayName: ATH-3-NA
-  interactionVerb: Talk
-  interactionDistance: 6
   displayNameText: {fileID: 1497511771}
+  interactionVerb: Talk
   interactionVerbText: {fileID: 1299980495}
 --- !u!1 &1597631465
 GameObject:
@@ -1780,6 +1786,25 @@ MonoBehaviour:
   toggleKey: f3
   positionText: {fileID: 1841914808}
   lookingAtText: {fileID: 1789792210}
+--- !u!1 &1974676948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9188428942403667626, guid: 9086e8445b81a754c8a1dcc2e969fdd6, type: 3}
+  m_PrefabInstance: {fileID: 558475386}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1974676954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974676948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5252e7740e4ef42a7eb64edf9c0085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solidColourShader: {fileID: 4800000, guid: f1e2396794b54104299eaa5af6fa7f0b, type: 3}
+  outlineShader: {fileID: 4800000, guid: 916c953c30ceb8c4a801bd50f9f658f7, type: 3}
 --- !u!114 &1990897939 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7783500096026334182, guid: 13a7a935e50e9534aaae61f433887421, type: 3}
@@ -2160,6 +2185,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097313660}
   m_CullTransparentMesh: 0
+--- !u!1 &2098158837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129374, guid: 496fa247adc61d44ebaeaf9d72671287, type: 3}
+  m_PrefabInstance: {fileID: 9843346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2129936417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,10 +2237,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyInteract: e
-  displayName: Blue Sphere
-  interactionVerb: Pick up
   interactionDistance: 5
+  outlineObject: {fileID: 2129936417}
+  displayName: Blue Sphere
   displayNameText: {fileID: 1990897939}
+  interactionVerb: Pick up
   interactionVerbText: {fileID: 1145071510}
 --- !u!135 &2129936420
 SphereCollider:

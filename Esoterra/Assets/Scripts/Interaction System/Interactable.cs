@@ -85,7 +85,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    // Check if the player is close enough to this interactable
+    // Check if the player is within range of this interactable
     public bool PlayerInRange()
     {
         // Here, gameObject refers to this interactable
