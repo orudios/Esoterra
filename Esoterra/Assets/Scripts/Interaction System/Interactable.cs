@@ -10,16 +10,18 @@ public class Interactable : MonoBehaviour
     public string keyInteract = "e";
 
     [Header("Interactable Details")]
-    [Tooltip("A human-readable name displayed to the player.")]
-    public string displayName;
-    [Tooltip("What the player will do with this Interactable.")]
-    public string interactionVerb;
     [Tooltip("How close the player needs to be in order to interact.")]
     [Range(2.0f, 8.0f)]
     public float interactionDistance = 5f;
+    [Tooltip("The object in world space which is highlighted when the player is in range.")]
+    public GameObject outlineObject;
 
     [Header("World Space Text")]
+    [Tooltip("A human-readable name displayed to the player.")]
+    public string displayName;
     public TMP_Text displayNameText;
+    [Tooltip("What the player will do with this Interactable.")]
+    public string interactionVerb;
     public TMP_Text interactionVerbText;
 
     // Player
@@ -37,6 +39,12 @@ public class Interactable : MonoBehaviour
     void Update()
     {
         ToggleWorldSpaceText();
+
+        if (CanInteract()) {
+            outlineObject.layer = LayerMask.NameToLayer("Outline");
+        } else {
+            outlineObject.layer = LayerMask.NameToLayer("Default");
+        }
 
         if (CanInteract() && Input.GetKeyDown(keyInteract)) {
             Interact();

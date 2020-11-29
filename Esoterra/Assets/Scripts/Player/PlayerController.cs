@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     Ray ray;
     RaycastHit hit;
 
+
     void Start()
     {
         this.currentHealth = this.maxHealth;
