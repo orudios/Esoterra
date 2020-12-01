@@ -14,19 +14,19 @@ public class EnemyController : MonoBehaviour
     NavMeshAgent agent;
     //NavMeshAgent reference
 
-    CharacterCombat combat;
+    //CharacterCombat combat;
     //reference to the CharacterCombat script for the enemy
 
-
+    [SerializeField] private enemyAnimations condition;
 
     // Start is called before the first frame update
     void Start()
     {
         target = PlayerManager.instance.player.transform;
-        // this is a script that keeps track of where the palyer is
+        // this is a script that keeps track of where the player is
         
-        agent = GetComponent<NavMeshAgent>();
-        combat = GetComponent<CharacterCombat>();
+        agent = GetComponent<NavMeshAgent>(); //game object component
+        //combat = GetComponent<CharacterCombat>();
     }
 
     // Update is called once per frame
@@ -38,15 +38,17 @@ public class EnemyController : MonoBehaviour
         if (distance<=enemyRange){
             agent.SetDestination(target.position);
             //chase player
-
+            Debug.Log("Chasing");
+            condition.setCondition(1);
             if (distance<=agent.stoppingDistance){
+                //if the enemy is next to the player
 
-                CharacterStats targetStats = target.GetComponent<CharacterStats>();
-
-                if (targetStats!= null){
-                    Debug.Log("attacking");
-                    combat.Attack(targetStats);
-                }
+                //CharacterStats targetStats = target.GetComponent<CharacterStats>();
+                //Debug.Log("about to attack");
+                //if (targetStats!= null){
+                //    Debug.Log("attacking with b");
+                    //combat.Attack(targetStats);
+                //}
                 
                 
                 FacePlayer();

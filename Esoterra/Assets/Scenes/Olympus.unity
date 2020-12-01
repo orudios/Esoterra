@@ -12508,7 +12508,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818396884}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bfba6157c180744eb4050686870eb6c, type: 3}
   m_Name: 
@@ -12523,12 +12523,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818396884}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f27d3e6e4ed2be4580e2446f556a44f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackSpeed: 1
+--- !u!114 &818396887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818396884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d51c58a1388b7746bef363f7ff398af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1001 &818547680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16059,7 +16072,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023825226}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 0
@@ -27326,15 +27339,14 @@ MonoBehaviour:
   playerIndicator:
     serializedVersion: 2
     m_Bits: 4096
-  walkingPath: {x: 0, y: 0, z: 0}
-  projectile: {fileID: 0}
-  walkingPathRange: 5
   attackTimeDelta: 0.5
   visionRange: 25
   attackRange: 1
   targetHealth: 30
   playerWithinVision: 0
   playerWithinAttackRange: 0
+  condition: {fileID: 1743223034}
+  health: {fileID: 818396887}
 --- !u!195 &1743223024
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27345,10 +27357,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1
+  m_Speed: 2
   m_Acceleration: 1
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 3000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -27369,7 +27381,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 944685240ce410144b5d4920ae7adaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyRange: 10
+  enemyRange: 20
+  condition: {fileID: 1743223034}
 --- !u!114 &1743223026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27384,7 +27397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage:
     baseValue: 0
-  maxHealth: 0
+  maxHealth: 100
 --- !u!114 &1743223027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27455,6 +27468,18 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1743223034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743223022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ae950b12110214c97cfa7eb41f80b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1744515762
 GameObject:
   m_ObjectHideFlags: 0

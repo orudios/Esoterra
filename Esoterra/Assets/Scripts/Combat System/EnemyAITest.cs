@@ -8,20 +8,21 @@ public class EnemyAITest : MonoBehaviour
     public NavMeshAgent enemy;
     public Transform player;
     public LayerMask groundIndicator, playerIndicator;
-    public Vector3 walkingPath;
-    public GameObject projectile;
+    //public Vector3 walkingPath;
+    //public GameObject projectile;
 
-    public float walkingPathRange;
+    //public float walkingPathRange;
     public float attackTimeDelta;
     public float visionRange, attackRange;
     public float targetHealth;
     
     public bool playerWithinVision, playerWithinAttackRange;
-    bool walkingPathSpecified;
+    //bool walkingPathSpecified;
     bool attackExecuted;
     CharacterController controller;
-    Animator animator;
+    [SerializeField] private enemyAnimations condition;
 
+    [SerializeField] private playerHealth health;
     private void Awake()
     {
         // Initialises the player object locally + enemy
@@ -30,15 +31,15 @@ public class EnemyAITest : MonoBehaviour
 
         // Initialise the animation controller for the enemy
         controller=GetComponent<CharacterController>();
-        animator=GetComponent<Animator>();
+        //animator=GetComponent<Animator>();
 
     }
 
     private void Update()
     {
         // Boolean check fields to determine whether player is within enemy vision/attack range
-        //playerWithinVision = Physics.CheckSphere(transform.position, visionRange, playerIndicator);
-        //playerWithinAttackRange = Physics.CheckSphere(transform.position, attackRange, playerIndicator);
+        playerWithinVision = Physics.CheckSphere(transform.position, visionRange, playerIndicator);
+        playerWithinAttackRange = Physics.CheckSphere(transform.position, attackRange, playerIndicator);
 
         // Appropriate enemy actions based on boolean check field permutations
         //if (!playerWithinVision && !playerWithinAttackRange) EnemyPatrol();
@@ -48,42 +49,45 @@ public class EnemyAITest : MonoBehaviour
         
     }
 
-    private void EnemyPatrol()
-    {
+    // private void EnemyPatrol()
+    // {
 
-        if (!walkingPathSpecified) AcquireWalkingPath();
-        if (walkingPathSpecified)
-        {
+    //     if (!walkingPathSpecified) AcquireWalkingPath();
+    //     if (walkingPathSpecified)
+    //     {
             
-            enemy.SetDestination(walkingPath);
-        }
+    //         enemy.SetDestination(walkingPath);
+    //     }
 
-        Vector3 distanceUntilWalkingPath = transform.position - walkingPath;
-    }
+    //     Vector3 distanceUntilWalkingPath = transform.position - walkingPath;
+    //     //calcuate distance to walkpoint
+    // }
 
-    private void AcquireWalkingPath()
-    {
-        float positionZ = Random.Range(-walkingPathRange, walkingPathRange);
-        float positionX = Random.Range(-walkingPathRange, walkingPathRange);
+    // private void AcquireWalkingPath()
+    // {
+    //     float positionZ = Random.Range(-walkingPathRange, walkingPathRange);
+    //     float positionX = Random.Range(-walkingPathRange, walkingPathRange);
+    //     //returns a random value within range 
 
-        walkingPath = new Vector3(transform.position.x + positionX, transform.position.y, transform.position.z + positionZ);
+    //     walkingPath = new Vector3(transform.position.x + positionX, transform.position.y, transform.position.z + positionZ);
 
-        if (Physics.Raycast(walkingPath, -transform.up, 2f, groundIndicator))
-        {
-            walkingPathSpecified = true;
-        }
-    }
+    //     if (Physics.Raycast(walkingPath, -transform.up, 2f, groundIndicator))
+    //     {
+    //         //checks if the point is within the map and on the ground
+    //         walkingPathSpecified = true;
+    //     }
+    // }
 
-    private void EnemyChasePlayer()
-    {
-        animator.SetInteger("condition", 1);
-        enemy.SetDestination(player.position);
-    }
+    // private void EnemyChasePlayer()
+    // {
+    //     //animator.SetInteger("condition", 1);
+    //     enemy.SetDestination(player.position);
+    // }
 
     private void EnemyAttackPlayer()
     {
-        enemy.SetDestination(transform.position);
-        transform.LookAt(player,Vector3.down);
+        //enemy.SetDestination(transform.position);
+        //transform.LookAt(player,Vector3.down);
         if (!attackExecuted)
         {
             //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
@@ -92,14 +96,18 @@ public class EnemyAITest : MonoBehaviour
             //rb.AddForce(transform.up * 8f, ForceMode.Impulse);  
             //animator.SetInteger("condition", 2);
             Debug.Log("attacking player");
+            //condition.setCondition(2);
+            health.receiveDamage(10);
             attackExecuted = true;
             Invoke(nameof(EnemyResetAttack), attackTimeDelta);
         }
+   
     }
 
     private void EnemyResetAttack()
     {
         attackExecuted = false;
+        
     }
 
     public void takeDamage(float damage)
@@ -116,13 +124,14 @@ public class EnemyAITest : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
+    // void OnCollisionEnter(Collision collision)
+    // {
         
-    }
+    // }
 
-    void OnTriggerEnter(Collider other)
-    {
+    // void OnTriggerEnter(Collider other)
+    // {
 
-    }
+    // }
+
 }
