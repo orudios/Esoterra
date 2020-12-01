@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4685802721236259136}
   - component: {fileID: 4685802721228955150}
   - component: {fileID: 4685802721232123846}
-  - component: {fileID: 4685802721238516833}
   - component: {fileID: 4685802721238516834}
   m_Layer: 0
   m_Name: Medbay Door
@@ -121,18 +120,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 1d8fb1d801abb5741a1a870b2e3986dd, type: 3}
---- !u!114 &4685802721238516833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4685802721238396660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8537d1ec723d90b4393750ab7bcac355, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4685802721238516834
 MonoBehaviour:
   m_ObjectHideFlags: 0

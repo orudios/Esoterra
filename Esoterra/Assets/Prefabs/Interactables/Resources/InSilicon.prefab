@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 66275221678823959}
-  interactionDistance: 5
+  interactionDistance: 4
   displayName: Silicon
   interactionVerb: Collect
   displayNameText: {fileID: 4276057921368747607}
