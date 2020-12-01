@@ -55049,6 +55049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InAthena
       objectReference: {fileID: 0}
+    - target: {fileID: 6535389069135385584, guid: 15ec843575ad3fc4188983aae2b521d2, type: 3}
+      propertyPath: interactionDistance
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15ec843575ad3fc4188983aae2b521d2, type: 3}
 --- !u!1001 &5911111179298217390
