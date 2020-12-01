@@ -7,6 +7,7 @@ public class Resource : Interactable
 {
     void Reset()
     {
+        interactionDistance = 4f;
         interactionVerb = "Collect";
     }
 

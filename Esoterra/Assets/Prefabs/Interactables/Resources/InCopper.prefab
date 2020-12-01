@@ -141,11 +141,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 940902749961903044}
-  interactionDistance: 5
+  interactionDistance: 4
   displayName: Copper
   interactionVerb: Collect
   displayNameText: {fileID: 6992487176090009616}
   interactionVerbText: {fileID: 6992487174443840936}
+  keyInteract: e
+  audioSources: []
   playerController: {fileID: 0}
 --- !u!1001 &940902749624570870
 PrefabInstance:

@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-// TODO
-// Position of Pickup in hierarchy on Instantiate()
-// https://stackoverflow.com/a/59711160
-
-
 public class Pickup : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)

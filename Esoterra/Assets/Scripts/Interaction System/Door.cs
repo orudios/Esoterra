@@ -127,8 +127,6 @@ public class Door : Interactable
 
     public override void Interact()
     {
-        Debug.Log("Interact() in Door class");
-
         if (!open)
         {
             open = true;

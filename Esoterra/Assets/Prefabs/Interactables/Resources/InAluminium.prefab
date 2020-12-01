@@ -109,12 +109,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 2084386490992290266}
-  interactionDistance: 5
+  interactionDistance: 4
   displayName: Aluminium
   interactionVerb: Collect
   displayNameText: {fileID: 4180673033214393672}
   interactionVerbText: {fileID: 4180673033715747056}
   keyInteract: e
+  audioSources: []
   playerController: {fileID: 0}
 --- !u!1 &7103729831538598904
 GameObject:
