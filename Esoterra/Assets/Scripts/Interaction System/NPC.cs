@@ -7,6 +7,7 @@ public class NPC : Interactable
 {
     void Reset()
     {
+        interactionDistance = 6f;
         interactionVerb = "Talk";
     }
 
