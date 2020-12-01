@@ -37,12 +37,12 @@ public class EnemyAITest : MonoBehaviour
     private void Update()
     {
         // Boolean check fields to determine whether player is within enemy vision/attack range
-        playerWithinVision = Physics.CheckSphere(transform.position, visionRange, playerIndicator);
-        playerWithinAttackRange = Physics.CheckSphere(transform.position, attackRange, playerIndicator);
+        //playerWithinVision = Physics.CheckSphere(transform.position, visionRange, playerIndicator);
+        //playerWithinAttackRange = Physics.CheckSphere(transform.position, attackRange, playerIndicator);
 
         // Appropriate enemy actions based on boolean check field permutations
-        if (!playerWithinVision && !playerWithinAttackRange) EnemyPatrol();
-        if (playerWithinVision && !playerWithinAttackRange) EnemyChasePlayer();
+        //if (!playerWithinVision && !playerWithinAttackRange) EnemyPatrol();
+        //if (playerWithinVision && !playerWithinAttackRange) EnemyChasePlayer();
         if (playerWithinVision && playerWithinAttackRange) EnemyAttackPlayer();
 
         
@@ -90,7 +90,8 @@ public class EnemyAITest : MonoBehaviour
 
             //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             //rb.AddForce(transform.up * 8f, ForceMode.Impulse);  
-            animator.SetInteger("condition", 2);
+            //animator.SetInteger("condition", 2);
+            Debug.Log("attacking player");
             attackExecuted = true;
             Invoke(nameof(EnemyResetAttack), attackTimeDelta);
         }

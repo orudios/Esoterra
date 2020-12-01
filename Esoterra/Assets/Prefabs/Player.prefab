@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 9188428941424209055}
   - component: {fileID: 9188428941424209041}
   m_Layer: 12
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,7 +221,6 @@ GameObject:
   - component: {fileID: 9188428942481600314}
   - component: {fileID: 9188428942481600319}
   - component: {fileID: 9188428942481600316}
-  - component: {fileID: 9188428942481600317}
   m_Layer: 12
   m_Name: Cylinder
   m_TagString: Untagged
@@ -292,20 +291,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &9188428942481600317
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188428942481600315}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &9188428943020218188
 GameObject:
   m_ObjectHideFlags: 0

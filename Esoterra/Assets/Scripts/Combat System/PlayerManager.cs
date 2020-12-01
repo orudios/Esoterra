@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerManager : MonoBehaviour
 {
    //singleton pattern
@@ -17,4 +17,8 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject player;
 
+    public void KillPlayer(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //reloads current scene when player dies
+    }
 }

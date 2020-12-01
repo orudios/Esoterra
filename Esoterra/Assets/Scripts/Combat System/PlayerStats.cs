@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class PlayerStats : CharacterStats
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Die()
     {
-        
-    }
+        base.Die();
+        // player dies
+        Debug.Log("player has died");
+        PlayerManager.instance.KillPlayer();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
