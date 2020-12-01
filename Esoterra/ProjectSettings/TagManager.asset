@@ -8,6 +8,8 @@ TagManager:
   - PlayerController
   - Enemy
   - Athena
+  - Interactable
+  - InteractableArea
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Player
   - groundIndicator
   - playerIndicator
-  - 
+  - Outline
   - 
   - 
   - 
