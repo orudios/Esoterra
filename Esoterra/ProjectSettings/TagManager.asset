@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Athena
   - Interactable
+  - InteractableArea
   layers:
   - Default
   - TransparentFX

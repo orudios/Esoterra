@@ -38,6 +38,11 @@ public class Crosshair : MonoBehaviour
             {
                 crosshair.color = new Color(0, 180, 255, 255);
             }
+            else if (lookingAtObj.CompareTag("InteractableArea")
+                && lookingAtObj.GetComponentInParent<Interactable>().CanInteract())
+            {
+                crosshair.color = new Color(0, 180, 255, 255);
+            }
             else
             {
                 crosshair.color = Color.white;
