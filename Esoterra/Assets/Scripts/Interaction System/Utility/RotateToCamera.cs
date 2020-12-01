@@ -8,6 +8,6 @@ public class RotateToCamera : MonoBehaviour
     void Update()
     {
         this.transform.rotation = Quaternion.LookRotation(
-                (this.transform.position - Camera.main.transform.position).normalized);
+            (this.transform.position - Camera.main.transform.position).normalized);
     }
 }
