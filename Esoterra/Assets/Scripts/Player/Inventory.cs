@@ -7,40 +7,40 @@ public class Inventory : MonoBehaviour
     // Store Item IDs and their quantity
     Dictionary<int, int> inventory = new Dictionary<int, int>();
 
-    public int Quantity(int id)
+    public int Quantity(int ID)
     {
-        // If this item is in the inventory, return the quantity
-        if (inventory.ContainsKey(id)) {
-            return inventory[id];
-        // Otherwise, inventory doesn't contain the item
+        // If this item is in the dictionary, return the quantity
+        if (inventory.ContainsKey(ID)) {
+            return inventory[ID];
+        // Otherwise, dictionary doesn't contain the item
         } else {
             return 0;
         }
     }
     
-    public void Add(int id, int amount)
+    public void AddItem(int ID, int amount)
     {
-        // None of this item: add the new item and amount to inventory
-        if (Quantity(id) == 0) {
-            inventory.Add(id, amount);
+        // None of this item: add the new item and amount to dictionary
+        if (Quantity(ID) == 0) {
+            inventory.Add(ID, amount);
         // Otherwise, increase the quantity
         } else {
-            inventory[id] += amount;
+            inventory[ID] += amount;
         }
     }
 
-    public bool Remove(int id, int amount)
+    public bool RemoveItem(int ID, int amount)
     {
         // None of this item: failure; no change
-        if (Quantity(id) == 0) {
+        if (Quantity(ID) == 0) {
             return false;
-        // Exact amount: success; completely remove the item from inventory
-        } else if (Quantity(id) == amount) {
-            inventory.Remove(id);
+        // Exact amount: success; completely remove the item from dictionary
+        } else if (Quantity(ID) == amount) {
+            inventory.Remove(ID);
             return true;
         // Otherwise: success; decrease the quantity
         } else {
-            inventory[id] -= amount;
+            inventory[ID] -= amount;
             return true;
         }
     }

@@ -29,7 +29,7 @@ public class Resource : Item
         // Audio
         base.Interact();
 
-        inventory.Add(ID, 1);
+        inventory.AddItem(ID, 1);
         Destroy(transform.parent.gameObject);
     }
 }
