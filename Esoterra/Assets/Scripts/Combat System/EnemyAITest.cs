@@ -6,32 +6,43 @@ using UnityEngine.AI;
 public class EnemyAITest : MonoBehaviour
 {
     public NavMeshAgent enemy;
-    public Transform player;
+    //public Transform player;
     public LayerMask groundIndicator, playerIndicator;
-    //public Vector3 walkingPath;
-    //public GameObject projectile;
-
-    //public float walkingPathRange;
     public float attackTimeDelta;
     public float visionRange, attackRange;
     public float targetHealth;
     
     public bool playerWithinVision, playerWithinAttackRange;
-    //bool walkingPathSpecified;
     bool attackExecuted;
-    CharacterController controller;
-    [SerializeField] private enemyAnimations condition;
 
+    public float enemyRange = 15f;
+    //This is how far the enemy can see
+
+    Transform target; 
+    //Player reference
+
+    NavMeshAgent agent;
+    //NavMeshAgent reference
+    //CharacterController controller;
+    //[SerializeField] public enemyAnimations condition;
+    public Animator animator;
     [SerializeField] private playerHealth health;
-    private void Awake()
+    private void Start()
     {
         // Initialises the player object locally + enemy
-        player = GameObject.FindWithTag("Player").transform;
+        //player = GameObject.FindWithTag("Player").transform;
         enemy = GetComponent<NavMeshAgent>();
 
         // Initialise the animation controller for the enemy
-        controller=GetComponent<CharacterController>();
-        //animator=GetComponent<Animator>();
+        //controller=GetComponent<CharacterController>();
+        animator=GetComponent<Animator>();
+
+        target = PlayerManager.instance.player.transform;
+        // this is a script that keeps track of where the player is
+        
+        agent = GetComponent<NavMeshAgent>(); //game object component belonging to enemy
+
+        //animator["Running"].wrapMode = WrapMode.Clamp;
 
     }
 
@@ -42,62 +53,55 @@ public class EnemyAITest : MonoBehaviour
         playerWithinAttackRange = Physics.CheckSphere(transform.position, attackRange, playerIndicator);
 
         // Appropriate enemy actions based on boolean check field permutations
-        //if (!playerWithinVision && !playerWithinAttackRange) EnemyPatrol();
-        //if (playerWithinVision && !playerWithinAttackRange) EnemyChasePlayer();
+        if (playerWithinVision && !playerWithinAttackRange) chasePlayer();
         if (playerWithinVision && playerWithinAttackRange) EnemyAttackPlayer();
-
         
     }
 
-    // private void EnemyPatrol()
-    // {
+    void chasePlayer(){
+        float distance = Vector3.Distance(target.position, transform.position);
+        //distance between the player and enemy
 
-    //     if (!walkingPathSpecified) AcquireWalkingPath();
-    //     if (walkingPathSpecified)
-    //     {
+        if (distance<=enemyRange){
+            agent.SetDestination(target.position);
+            //chase player
+            Debug.Log("Chasing");
+            animator.SetInteger("condition", 1);
+            //condition.setCondition(1);
+            if (distance<=agent.stoppingDistance){
+                //if the enemy is next to the player
+                //animator.SetInteger("condition", 0);
+                
+                FacePlayer();
+                //face the player
+
+            }
             
-    //         enemy.SetDestination(walkingPath);
-    //     }
+        }
+        
+    }
+    
+    void FacePlayer(){
+        Vector3 direction = (target.position - transform.position).normalized;
+        //player direction
 
-    //     Vector3 distanceUntilWalkingPath = transform.position - walkingPath;
-    //     //calcuate distance to walkpoint
-    // }
+        Quaternion rotate = Quaternion.LookRotation(new Vector3(direction.x,0, direction.z));
+        //which way we rotate
 
-    // private void AcquireWalkingPath()
-    // {
-    //     float positionZ = Random.Range(-walkingPathRange, walkingPathRange);
-    //     float positionX = Random.Range(-walkingPathRange, walkingPathRange);
-    //     //returns a random value within range 
-
-    //     walkingPath = new Vector3(transform.position.x + positionX, transform.position.y, transform.position.z + positionZ);
-
-    //     if (Physics.Raycast(walkingPath, -transform.up, 2f, groundIndicator))
-    //     {
-    //         //checks if the point is within the map and on the ground
-    //         walkingPathSpecified = true;
-    //     }
-    // }
-
-    // private void EnemyChasePlayer()
-    // {
-    //     //animator.SetInteger("condition", 1);
-    //     enemy.SetDestination(player.position);
-    // }
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotate, Time.deltaTime * 5f);
+        //update our own direction
+    }
 
     private void EnemyAttackPlayer()
     {
-        //enemy.SetDestination(transform.position);
-        //transform.LookAt(player,Vector3.down);
+   
         if (!attackExecuted)
         {
-            //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-
-            //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            //rb.AddForce(transform.up * 8f, ForceMode.Impulse);  
-            //animator.SetInteger("condition", 2);
+ 
             Debug.Log("attacking player");
             //condition.setCondition(2);
-            health.receiveDamage(10);
+            animator.SetInteger("condition", 2);
+            health.receiveDamage(10); //making damage to the player
             attackExecuted = true;
             Invoke(nameof(EnemyResetAttack), attackTimeDelta);
         }
@@ -124,14 +128,5 @@ public class EnemyAITest : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // void OnCollisionEnter(Collision collision)
-    // {
-        
-    // }
-
-    // void OnTriggerEnter(Collider other)
-    // {
-
-    // }
 
 }
