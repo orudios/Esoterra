@@ -7,17 +7,17 @@ using TMPro;
 public class Interactable : MonoBehaviour
 {
     [Header("Interactable Details")]
-    [Tooltip("The object the player needs to be in range of and look at to interact.")]
-    public GameObject targetObject;
-    [Tooltip("How close the player needs to be in order to interact.")]
-    [Range(1.0f, 10.0f)]
-    public float interactionDistance = 5f;
-
-    [Header("In-Game Text")]
     [Tooltip("A human-readable name displayed to the player.")]
     public string displayName;
     [Tooltip("What the player will do with this interactable.")]
     public string interactionVerb;
+    [Tooltip("How close the player needs to be in order to interact.")]
+    [Range(1.0f, 10.0f)]
+    public float interactionDistance = 5f;
+    [Tooltip("The object to be outlined when the player is in range.")]
+    public GameObject outlineObject;
+
+    [Header("In-Game Text")]
     public TMP_Text displayNameText;
     public TMP_Text interactionVerbText;
 
@@ -42,16 +42,8 @@ public class Interactable : MonoBehaviour
     void Update()
     {
         ToggleWorldSpaceText();
-
-        if (CanInteract()) {
-            targetObject.layer = LayerMask.NameToLayer("Outline");
-        } else {
-            targetObject.layer = LayerMask.NameToLayer("Default");
-        }
-
-        if (CanInteract() && Input.GetKeyDown(keyInteract)) {
-            Interact();
-        }
+        TryOutline();
+        TryInteract();
     }
 
     public virtual void SetWorldSpaceText()
@@ -108,6 +100,24 @@ public class Interactable : MonoBehaviour
         return false;
     }
 
+    // Do outline on condition
+    void TryOutline()
+    {
+        if (CanInteract()) {
+            outlineObject.layer = LayerMask.NameToLayer("Outline");
+        } else {
+            outlineObject.layer = LayerMask.NameToLayer("Default");
+        }
+    }
+
+    // Do interact on condition
+    void TryInteract()
+    {
+        if (CanInteract() && Input.GetKeyDown(keyInteract)) {
+            Interact();
+        }
+    }
+
     public bool HasAudio()
     {
         if (audioSources.Length > 0) {
@@ -118,7 +128,6 @@ public class Interactable : MonoBehaviour
 
     public virtual void Interact()
     {
-        Debug.Log("Interact() in Interactable class");
         if (HasAudio()) {
             audioSources[0].Play();
         }

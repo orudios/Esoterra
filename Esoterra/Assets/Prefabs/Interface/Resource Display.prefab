@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 5, y: 5}
-  m_SizeDelta: {x: 30, y: 15}
+  m_SizeDelta: {x: 25, y: 15}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &2040378794857808154
 CanvasRenderer:
@@ -217,6 +217,9 @@ MonoBehaviour:
   atomicNumber: 6
   symbol: C
   prefab: {fileID: 8775430104792705728, guid: ae4a699a16d172648964b241f81a9db7, type: 3}
+  atomicNumberText: {fileID: 2040378796331875153}
+  symbolText: {fileID: 2040378794857808153}
+  quantityText: {fileID: 8478715260928070227}
 --- !u!1 &2040378796331875159
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,8 +333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -5, y: 5}
-  m_SizeDelta: {x: 30, y: 15}
+  m_AnchoredPosition: {x: -7, y: 5}
+  m_SizeDelta: {x: 25, y: 20}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &7047515955677129708
 CanvasRenderer:
@@ -363,11 +366,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
-    m_FontSize: 14
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 14
+    m_MinSize: 1
+    m_MaxSize: 18
     m_Alignment: 8
     m_AlignByGeometry: 0
     m_RichText: 1
