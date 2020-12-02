@@ -5391,8 +5391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8daa4fc479af875409c9e740e290a79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 6535389069135486952}
   interactionDistance: 5
+  outlineObject: {fileID: 6535389069135509214}
   displayName: ATH-3-NA
   interactionVerb: Talk
   displayNameText: {fileID: 3998743005148551988}

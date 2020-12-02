@@ -14,7 +14,6 @@ public class Pickup : MonoBehaviour
 
     public virtual void DoAction()
     {
-        Debug.Log("DoAction() in Pickup class");
         Destroy(gameObject);
     }
 }

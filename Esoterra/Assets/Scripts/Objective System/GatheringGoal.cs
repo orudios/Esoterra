@@ -25,7 +25,7 @@ public class GatheringGoal : Goal
         // EventController.OnResourceGather += ResourceGathered;
     }
 
-    public void ResourceGathered(IResource resource)
+    public void ResourceGathered(Resource resource)
     {
         if (resource.ID == this.TrackingResourceID)
         {

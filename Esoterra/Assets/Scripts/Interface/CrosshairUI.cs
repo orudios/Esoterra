@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class Crosshair : MonoBehaviour
+public class CrosshairUI : MonoBehaviour
 {
     [Header("Canvas Elements")]
     public Image crosshair;
@@ -36,12 +36,12 @@ public class Crosshair : MonoBehaviour
             if (lookingAtObj.CompareTag("Interactable")
                 && lookingAtObj.GetComponent<Interactable>().CanInteract())
             {
-                crosshair.color = new Color(0, 180, 255, 255);
+                crosshair.color = new Color32(0, 210, 255, 255);
             }
             else if (lookingAtObj.CompareTag("InteractableArea")
                 && lookingAtObj.GetComponentInParent<Interactable>().CanInteract())
             {
-                crosshair.color = new Color(0, 180, 255, 255);
+                crosshair.color = new Color32(0, 210, 255, 255);
             }
             else
             {

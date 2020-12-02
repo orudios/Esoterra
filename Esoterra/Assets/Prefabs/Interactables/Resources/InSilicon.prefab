@@ -140,15 +140,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842cf8c24203bd14eb56d698883f3622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 66275221678823959}
-  interactionDistance: 4
   displayName: Silicon
   interactionVerb: Collect
+  interactionDistance: 4
+  outlineObject: {fileID: 66275221678823959}
   displayNameText: {fileID: 4276057921368747607}
   interactionVerbText: {fileID: 4276057921874238447}
   keyInteract: e
   audioSources: []
   playerController: {fileID: 0}
+  ID: 3
+  inventory: {fileID: 0}
+  atomicNumber: 14
+  symbol: Si
 --- !u!1 &4258567092232954651
 GameObject:
   m_ObjectHideFlags: 0
