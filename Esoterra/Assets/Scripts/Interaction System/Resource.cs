@@ -3,25 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Resource : Interactable
+public class Resource : Item
 {
+    [Header("Resource Details")]
+    public int atomicNumber;
+    public string symbol;
+
+    Inventory inventory;
+
+
     void Reset()
     {
         interactionDistance = 4f;
         interactionVerb = "Collect";
     }
 
+    public override void Start()
+    {
+        base.Start();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+    }
+
     public override void Interact()
     {
-        Debug.Log("Interact() in Resource class");
-        Debug.Log("Collected a " + displayName);
+        // Audio
+        base.Interact();
 
-        if (HasAudio()) {
-            audioSources[0].Play();
-        }
-
-        // Destroy the parent object
-        // This destroys the interactable, its world space text, and the container
+        inventory.AddItem(ID, 1);
         Destroy(transform.parent.gameObject);
     }
 }

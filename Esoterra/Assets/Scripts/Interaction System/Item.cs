@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public interface IResource
+public class Item : Interactable
 {
-    int ID {get; set;}
-    string Name {get; set;}
+    [Header("Item Details")]
+    public int ID;
 }

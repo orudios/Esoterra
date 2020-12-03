@@ -7,7 +7,9 @@ public class HealthGlobe : Pickup
 {
     public override void DoAction()
     {
-        Debug.Log("DoAction() in HealthGlobe class");
+        Debug.Log("HealthGlobe action!");
+
+        // Destroy
         base.DoAction();
     }
 }
