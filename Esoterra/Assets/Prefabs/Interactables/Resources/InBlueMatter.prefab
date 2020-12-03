@@ -142,15 +142,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842cf8c24203bd14eb56d698883f3622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 7070073485503243793}
-  interactionDistance: 4
   displayName: Blue Matter
   interactionVerb: Collect
+  interactionDistance: 4
+  outlineObject: {fileID: 7070073485503243793}
   displayNameText: {fileID: 1015982249213714068}
   interactionVerbText: {fileID: 1015982250784631596}
   keyInteract: e
   audioSources: []
   playerController: {fileID: 0}
+  ID: 6
+  inventory: {fileID: 0}
+  atomicNumber: 271
+  symbol: BM
 --- !u!1 &7070073485503243795
 GameObject:
   m_ObjectHideFlags: 0

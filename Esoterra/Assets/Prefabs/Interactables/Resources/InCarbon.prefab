@@ -109,15 +109,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842cf8c24203bd14eb56d698883f3622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 4059068451343513951}
-  interactionDistance: 4
   displayName: Carbon
   interactionVerb: Collect
+  interactionDistance: 4
+  outlineObject: {fileID: 4059068451343513951}
   displayNameText: {fileID: 3285567753352524163}
   interactionVerbText: {fileID: 3285567752855405627}
   keyInteract: e
   audioSources: []
   playerController: {fileID: 0}
+  ID: 1
+  inventory: {fileID: 0}
+  atomicNumber: 6
+  symbol: C
+  resourceDisplayUI: {fileID: 0}
 --- !u!1 &4727691571689539585
 GameObject:
   m_ObjectHideFlags: 0
