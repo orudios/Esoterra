@@ -22,7 +22,7 @@ public class Interactable : MonoBehaviour
     public TMP_Text interactionVerbText;
 
     // Controls
-    [HideInInspector] public string keyInteract = "e";
+    [HideInInspector] public string interactKey = "e";
 
     // Audio
     [HideInInspector] public AudioSource[] audioSources;
@@ -50,7 +50,7 @@ public class Interactable : MonoBehaviour
     {
         displayNameText.GetComponent<TextMeshPro>().text = displayName;
         interactionVerbText.GetComponent<TextMeshPro>().text =
-            interactionVerb + " [" + keyInteract.ToUpper() + "]";
+            interactionVerb + " [" + interactKey.ToUpper() + "]";
     }
 
     // Show or hide name and verb above interactables in the world
@@ -113,7 +113,7 @@ public class Interactable : MonoBehaviour
     // Do interact on condition
     void TryInteract()
     {
-        if (CanInteract() && Input.GetKeyDown(keyInteract)) {
+        if (CanInteract() && Input.GetKeyDown(interactKey)) {
             Interact();
         }
     }

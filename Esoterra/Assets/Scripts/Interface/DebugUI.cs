@@ -10,8 +10,6 @@ public class DebugUI : MonoBehaviour
 
     PlayerController playerController;
     Inventory inventory;
-    int minID = 1;
-    int maxID = 6;
 
 
     void Awake()
@@ -52,16 +50,25 @@ public class DebugUI : MonoBehaviour
 
     void InventoryCheat()
     {
-        for (int i = minID; i <= maxID; i++) {
+        // Add or remove 1 resource
+        for (int i = 1; i <= 6; i++) {
             // If the player has pressed a key corresponding to an Item ID...
             if (Input.GetKey(i.ToString())) {
-                // + add resource
+                // + add
                 if (Input.GetKeyDown(KeyCode.Plus) || Input.GetKeyDown(KeyCode.KeypadPlus)) {
                     inventory.AddItem(i, 1);
                 }
-                // - remove resource
+                // - remove
                 else if (Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown(KeyCode.KeypadMinus)) {
                     inventory.RemoveItem(i, 1);
+                }
+            }
+        }
+        // Add 7 of all resources
+        if (Input.GetKey("7")) {
+            if (Input.GetKeyDown(KeyCode.Plus) || Input.GetKeyDown(KeyCode.KeypadPlus)) {
+                for (int i = 1; i <= 6; i++) {
+                    inventory.AddItem(i, 7);
                 }
             }
         }

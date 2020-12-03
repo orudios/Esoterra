@@ -5391,15 +5391,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8daa4fc479af875409c9e740e290a79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionDistance: 5
-  outlineObject: {fileID: 6535389069135509214}
   displayName: ATH-3-NA
   interactionVerb: Talk
+  interactionDistance: 5
+  outlineObject: {fileID: 6535389069135509214}
   displayNameText: {fileID: 3998743005148551988}
   interactionVerbText: {fileID: 3998743005148551989}
-  keyInteract: e
+  interactKey: e
   audioSources: []
   playerController: {fileID: 0}
+  dialogueStrings:
+  - ATH... 3.. NA.. rebooting...
+  - ATH-3-NA online.
+  - 'Currently we are orbiting: Esoterra.'
+  - 'Olympus structural integrity is: Compromised.'
+  endString: Leave
 --- !u!82 &6535389069135385585
 AudioSource:
   m_ObjectHideFlags: 0

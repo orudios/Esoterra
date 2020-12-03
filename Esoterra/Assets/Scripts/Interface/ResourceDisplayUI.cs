@@ -9,7 +9,7 @@ public class ResourceDisplayUI : MonoBehaviour
     [Header("Resource Details")]
     public GameObject prefab;
     
-    [Header("Canvas Elements")]
+    [Header("UI Elements")]
     public Text atomicNumberText;
     public Text symbolText;
     public Text quantityText;
