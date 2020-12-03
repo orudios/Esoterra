@@ -6,7 +6,7 @@ using TMPro;
 
 public class Door : Interactable
 {
-    [Header("Extra Door Text")]
+    [Header("In-Game Text (Back)")]
     public TMP_Text displayNameTextBack;
     public TMP_Text interactionVerbTextBack;
     
@@ -41,9 +41,9 @@ public class Door : Interactable
         displayNameTextBack.GetComponent<TMP_Text>().text = displayName;
 
         interactionVerbText.GetComponent<TMP_Text>().text =
-            interactionVerb + " [" + keyInteract.ToUpper() + "]";
+            interactionVerb + " [" + interactKey.ToUpper() + "]";
         interactionVerbTextBack.GetComponent<TMP_Text>().text =
-            interactionVerb + " [" + keyInteract.ToUpper() + "]";
+            interactionVerb + " [" + interactKey.ToUpper() + "]";
     }
 
     // Show or hide name and verb in-game
@@ -101,10 +101,10 @@ public class Door : Interactable
         return closestIndex;
     }
 
-    // Return true if player is in range and looking at target
+    // For doors, player must look at outlineObject (DoorTargetArea) rather than gameObject
     public override bool CanInteract()
     {
-        if (PlayerInRange() && playerController.LookingAt() == targetObject) {
+        if (PlayerInRange() && playerController.LookingAt() == outlineObject) {
             return true;
         }
         return false;
