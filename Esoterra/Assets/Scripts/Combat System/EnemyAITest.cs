@@ -5,16 +5,17 @@ using UnityEngine.AI;
 
 public class EnemyAITest : MonoBehaviour
 {
-    public NavMeshAgent enemy;
-    //public Transform player;
+    public NavMeshAgent enemy; 
+    
     public LayerMask groundIndicator, playerIndicator;
     public float attackTimeDelta;
     public float visionRange, attackRange;
-    public float targetHealth;
+    public float targetHealth; //enemy health
     
-    public bool playerWithinVision, playerWithinAttackRange;
-    bool attackExecuted;
+    public bool playerWithinVision, playerWithinAttackRange; //for the enemy to decide whether to chase or attack
+    bool attackExecuted; //stops spamming attacks
 
+    public int attackCondition; //identifies which animation is used for the attack
     public float enemyRange = 15f;
     //This is how far the enemy can see
 
@@ -26,6 +27,12 @@ public class EnemyAITest : MonoBehaviour
     //CharacterController controller;
     //[SerializeField] public enemyAnimations condition;
     public Animator animator;
+
+    bool playerDead;
+    
+    private AudioSource enemyWalking;
+
+    public float walkTimeDelta;
     [SerializeField] private playerHealth health;
     private void Start()
     {
@@ -42,7 +49,9 @@ public class EnemyAITest : MonoBehaviour
         
         agent = GetComponent<NavMeshAgent>(); //game object component belonging to enemy
 
-        //animator["Running"].wrapMode = WrapMode.Clamp;
+        playerDead = false;
+
+        enemyWalking = gameObject.GetComponent<AudioSource>();
 
     }
 
@@ -52,25 +61,38 @@ public class EnemyAITest : MonoBehaviour
         playerWithinVision = Physics.CheckSphere(transform.position, visionRange, playerIndicator);
         playerWithinAttackRange = Physics.CheckSphere(transform.position, attackRange, playerIndicator);
 
-        // Appropriate enemy actions based on boolean check field permutations
+        
+        if (playerDead == false){
+            // Appropriate enemy actions based on boolean check field permutations
         if (playerWithinVision && !playerWithinAttackRange) chasePlayer();
         if (playerWithinVision && playerWithinAttackRange) EnemyAttackPlayer();
+        }
+        
+
+
+        
+        
         
     }
 
     void chasePlayer(){
         float distance = Vector3.Distance(target.position, transform.position);
         //distance between the player and enemy
-
-        if (distance<=enemyRange){
+        
+        if (distance<=enemyRange && !enemyWalking.isPlaying && playerDead==false){
             agent.SetDestination(target.position);
             //chase player
             Debug.Log("Chasing");
+            Debug.Log("Supposed to play now");
+            enemyWalking.Play();
+            Invoke(nameof(enemyResetSound), walkTimeDelta);
+            
             animator.SetInteger("condition", 1);
+            
+            
             //condition.setCondition(1);
             if (distance<=agent.stoppingDistance){
                 //if the enemy is next to the player
-                //animator.SetInteger("condition", 0);
                 
                 FacePlayer();
                 //face the player
@@ -100,17 +122,22 @@ public class EnemyAITest : MonoBehaviour
  
             Debug.Log("attacking player");
             //condition.setCondition(2);
-            animator.SetInteger("condition", 2);
+            if (enemyWalking.isPlaying){
+                enemyWalking.Stop();
+            }
+            if (playerDead==false){
+                animator.SetInteger("condition", attackCondition);
+            }
             health.receiveDamage(10); //making damage to the player
             attackExecuted = true;
-            Invoke(nameof(EnemyResetAttack), attackTimeDelta);
+            Invoke(nameof(EnemyResetAttackSound), attackTimeDelta);
         }
    
     }
 
-    private void EnemyResetAttack()
+    private void EnemyResetAttackSound()
     {
-        attackExecuted = false;
+        enemyWalking.Stop();
         
     }
 
@@ -119,13 +146,30 @@ public class EnemyAITest : MonoBehaviour
         targetHealth -= damage;
         if (targetHealth <= 0f)
         {
-            Death();
+            if(playerDead==false){
+                Debug.Log("enemy has died");
+                agent.baseOffset=0;
+                enemy.speed=0;
+                enemy.acceleration=0;
+                animator.SetInteger("condition", 3);
+                playerDead=true;
+                //Death();
+            }
+            
+            //Death();
         }
     }
 
     void Death()
     {
+        
         Destroy(gameObject);
+    }
+
+    private void enemyResetSound()
+    {
+        enemyWalking.Stop();
+        
     }
 
 
