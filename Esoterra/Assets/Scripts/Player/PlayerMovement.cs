@@ -42,14 +42,16 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(playerMovement * playerSpeed * Time.deltaTime);
 
         if (horizontalAxis!=0 || verticalAxis!=0){
-            //Debug.Log("horizontal be like ");
-            //Debug.Log(horizontalAxis);
+            //if the player is moving
             
             if (!playerWalking.isPlaying){
                 //playerWalking.volume=Random.Range(0.8f,1);
                 //playerWalking.pitch=Random.Range(0.8f, 1.2f);
                 playerWalking.Play();
+                //play walking sound 
+
                 Invoke(nameof(PlayerResetSound), walkTimeDelta);
+                //stops spamming the walking sound
             }
             //playerWalking.Play();
             

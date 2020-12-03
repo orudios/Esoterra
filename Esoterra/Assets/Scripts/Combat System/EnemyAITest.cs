@@ -10,12 +10,16 @@ public class EnemyAITest : MonoBehaviour
     public LayerMask groundIndicator, playerIndicator;
     public float attackTimeDelta;
     public float visionRange, attackRange;
-    public float targetHealth; //enemy health
+    public float targetHealth; 
+    //enemy health
     
-    public bool playerWithinVision, playerWithinAttackRange; //for the enemy to decide whether to chase or attack
-    bool attackExecuted; //stops spamming attacks
+    public bool playerWithinVision, playerWithinAttackRange; 
+    //for the enemy to decide whether to chase or attack
+    bool attackExecuted; 
+    //stops spamming attacks
 
-    public int attackCondition; //identifies which animation is used for the attack
+    public int attackCondition; 
+    //identifies which animation is used for the attack
     public float enemyRange = 15f;
     //This is how far the enemy can see
 
@@ -24,11 +28,11 @@ public class EnemyAITest : MonoBehaviour
 
     NavMeshAgent agent;
     //NavMeshAgent reference
-    //CharacterController controller;
-    //[SerializeField] public enemyAnimations condition;
     public Animator animator;
 
-    bool playerDead;
+    bool enemyDead;
+
+    public float distance;
     
     private AudioSource Walking;
 
@@ -36,19 +40,18 @@ public class EnemyAITest : MonoBehaviour
     private void Start()
     {
         // Initialises the player object locally + enemy
-        //player = GameObject.FindWithTag("Player").transform;
         enemy = GetComponent<NavMeshAgent>();
 
         // Initialise the animation controller for the enemy
-        //controller=GetComponent<CharacterController>();
         animator=GetComponent<Animator>();
 
         target = PlayerManager.instance.player.transform;
         // this is a script that keeps track of where the player is
         
-        agent = GetComponent<NavMeshAgent>(); //game object component belonging to enemy
+        agent = GetComponent<NavMeshAgent>(); 
+        //game object component belonging to enemy
 
-        playerDead = false;
+        enemyDead = false;
 
 
     }
@@ -60,37 +63,38 @@ public class EnemyAITest : MonoBehaviour
         playerWithinAttackRange = Physics.CheckSphere(transform.position, attackRange, playerIndicator);
 
         
-        if (playerDead == false){
+        if (enemyDead == false){
+            //if the player is not dead
+
+            distance = Vector3.Distance(target.position, transform.position);
+            //distance between the player and enemy
+
             // Appropriate enemy actions based on boolean check field permutations
-        if (playerWithinVision && !playerWithinAttackRange) chasePlayer();
-        if (playerWithinVision && playerWithinAttackRange) EnemyAttackPlayer();
-        }
-        
-
-
-        
-        
+            if (playerWithinVision && !playerWithinAttackRange) chasePlayer();
+            if (playerWithinVision && playerWithinAttackRange) EnemyAttackPlayer();
+        }  
         
     }
 
     void chasePlayer(){
-        float distance = Vector3.Distance(target.position, transform.position);
-        //distance between the player and enemy
+        
 
         if (distance<=enemyRange){
+
+            FacePlayer();
             agent.SetDestination(target.position);
-            //chase player
-            Debug.Log("Chasing");
-            if (playerDead==false){
-                animator.SetInteger("condition", 1);
-            }
+            //chase player if the player is within range
+
+            //Debug.Log("Chasing");
+            //if (enemyDead==false){
+                //animator.SetInteger("condition", 1);
+                //only play animation of the player is alive
+            //}
             
-            //condition.setCondition(1);
             if (distance<=agent.stoppingDistance){
-                //if the enemy is next to the player
-                
+               
                 FacePlayer();
-                //face the player
+                //if the enemy is close enough then face the player
 
             }
             
@@ -116,13 +120,18 @@ public class EnemyAITest : MonoBehaviour
         {
  
             Debug.Log("attacking player");
-            //condition.setCondition(2);
-            if (playerDead==false){
-                animator.SetInteger("condition", attackCondition);
+
+            if (enemyDead==false){
+                //animator.SetInteger("condition", attackCondition);
+                //if the player is not dead change the animation
             }
-            health.receiveDamage(10); //making damage to the player
+
+            health.receiveDamage(10); 
+            //making damage to the player
+
             attackExecuted = true;
             Invoke(nameof(EnemyResetAttack), attackTimeDelta);
+            //used to stop spam attacks
         }
    
     }
@@ -136,29 +145,22 @@ public class EnemyAITest : MonoBehaviour
     public void takeDamage(float damage)
     {
         targetHealth -= damage;
+        //take away from enemy health
+
         if (targetHealth <= 0f)
         {
-            if(playerDead==false){
+            if(enemyDead==false){
                 Debug.Log("enemy has died");
+
                 agent.baseOffset=0;
                 enemy.speed=0;
                 enemy.acceleration=0;
-                animator.SetInteger("condition", 3);
-                playerDead=true;
-                //Death();
+                //animator.SetInteger("condition", 3);
+                enemyDead=true;
+                //plays death animation and stops enemy from moving
             }
             
-            //Death();
         }
     }
-
-    void Death()
-    {
-        
-        Destroy(gameObject);
-    }
-
-  
-
 
 }
