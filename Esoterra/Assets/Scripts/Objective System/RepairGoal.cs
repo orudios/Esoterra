@@ -6,9 +6,9 @@ using UnityEngine;
 public class RepairGoal : Goal
 {
     public GameObject repairableObject;
-    public List<KeyValuePair<IResource, int>> RequiredResources {get; set;} = new List<KeyValuePair<IResource, int>>();
+    public List<KeyValuePair<Resource, int>> RequiredResources {get; set;} = new List<KeyValuePair<Resource, int>>();
 
-    public RepairGoal(Objective objective, GameObject repairableObject, List<KeyValuePair<IResource, int>> requiredResources, string description, bool completed)
+    public RepairGoal(Objective objective, GameObject repairableObject, List<KeyValuePair<Resource, int>> requiredResources, string description, bool completed)
     {
         this.Objective = objective;
         this.repairableObject = repairableObject;

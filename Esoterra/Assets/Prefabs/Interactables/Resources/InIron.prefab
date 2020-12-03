@@ -141,15 +141,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842cf8c24203bd14eb56d698883f3622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 4750319525193552933}
-  interactionDistance: 4
   displayName: Iron
   interactionVerb: Collect
+  interactionDistance: 4
+  outlineObject: {fileID: 4750319525193552933}
   displayNameText: {fileID: 1515435811323449098}
   interactionVerbText: {fileID: 1515435810817964722}
   keyInteract: e
   audioSources: []
   playerController: {fileID: 0}
+  ID: 4
+  inventory: {fileID: 0}
+  atomicNumber: 26
+  symbol: Fe
 --- !u!1001 &8719924141073456364
 PrefabInstance:
   m_ObjectHideFlags: 0

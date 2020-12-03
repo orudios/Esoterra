@@ -140,15 +140,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842cf8c24203bd14eb56d698883f3622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 940902749961903044}
-  interactionDistance: 4
   displayName: Copper
   interactionVerb: Collect
+  interactionDistance: 4
+  outlineObject: {fileID: 940902749961903044}
   displayNameText: {fileID: 6992487176090009616}
   interactionVerbText: {fileID: 6992487174443840936}
   keyInteract: e
   audioSources: []
   playerController: {fileID: 0}
+  ID: 5
+  inventory: {fileID: 0}
+  atomicNumber: 29
+  symbol: Cu
 --- !u!1001 &940902749624570870
 PrefabInstance:
   m_ObjectHideFlags: 0
