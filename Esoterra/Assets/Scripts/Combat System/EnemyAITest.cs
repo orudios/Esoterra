@@ -30,9 +30,8 @@ public class EnemyAITest : MonoBehaviour
 
     bool playerDead;
     
-    private AudioSource enemyWalking;
+    private AudioSource Walking;
 
-    public float walkTimeDelta;
     [SerializeField] private playerHealth health;
     private void Start()
     {
@@ -51,7 +50,6 @@ public class EnemyAITest : MonoBehaviour
 
         playerDead = false;
 
-        enemyWalking = gameObject.GetComponent<AudioSource>();
 
     }
 
@@ -78,17 +76,14 @@ public class EnemyAITest : MonoBehaviour
     void chasePlayer(){
         float distance = Vector3.Distance(target.position, transform.position);
         //distance between the player and enemy
-        
-        if (distance<=enemyRange && !enemyWalking.isPlaying && playerDead==false){
+
+        if (distance<=enemyRange){
             agent.SetDestination(target.position);
             //chase player
             Debug.Log("Chasing");
-            Debug.Log("Supposed to play now");
-            enemyWalking.Play();
-            Invoke(nameof(enemyResetSound), walkTimeDelta);
-            
-            animator.SetInteger("condition", 1);
-            
+            if (playerDead==false){
+                animator.SetInteger("condition", 1);
+            }
             
             //condition.setCondition(1);
             if (distance<=agent.stoppingDistance){
@@ -122,22 +117,19 @@ public class EnemyAITest : MonoBehaviour
  
             Debug.Log("attacking player");
             //condition.setCondition(2);
-            if (enemyWalking.isPlaying){
-                enemyWalking.Stop();
-            }
             if (playerDead==false){
                 animator.SetInteger("condition", attackCondition);
             }
             health.receiveDamage(10); //making damage to the player
             attackExecuted = true;
-            Invoke(nameof(EnemyResetAttackSound), attackTimeDelta);
+            Invoke(nameof(EnemyResetAttack), attackTimeDelta);
         }
    
     }
 
-    private void EnemyResetAttackSound()
+    private void EnemyResetAttack()
     {
-        enemyWalking.Stop();
+        attackExecuted = false;
         
     }
 
@@ -166,11 +158,7 @@ public class EnemyAITest : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void enemyResetSound()
-    {
-        enemyWalking.Stop();
-        
-    }
+  
 
 
 }
