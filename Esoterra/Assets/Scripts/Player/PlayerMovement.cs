@@ -16,6 +16,13 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 playerVelocity;
     bool grounded;
+    private AudioSource playerWalking;
+
+    public float walkTimeDelta;
+    
+    void Start(){
+        playerWalking = gameObject.GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -34,6 +41,24 @@ public class PlayerMovement : MonoBehaviour
         Vector3 playerMovement = transform.right * horizontalAxis + transform.forward * verticalAxis;
         controller.Move(playerMovement * playerSpeed * Time.deltaTime);
 
+        if (horizontalAxis!=0 || verticalAxis!=0){
+            //Debug.Log("horizontal be like ");
+            //Debug.Log(horizontalAxis);
+            
+            if (!playerWalking.isPlaying){
+                //playerWalking.volume=Random.Range(0.8f,1);
+                //playerWalking.pitch=Random.Range(0.8f, 1.2f);
+                playerWalking.Play();
+                Invoke(nameof(PlayerResetSound), walkTimeDelta);
+            }
+            //playerWalking.Play();
+            
+        }        
+        //playerWalking.Play();
+        //the problem is that it plays the auto so fast that it seems like its a long buzz
+        // must space the time out
+        // watch a tutorial
+        
         // Code governing jumping - ensures the player is grounded (by checking if they are on a groundIndicator)
         if(Input.GetButtonDown("Jump") && grounded)
         {
@@ -46,6 +71,11 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
     }
  
+    private void PlayerResetSound()
+    {
+        playerWalking.Stop();
+        
+    }
 
     
 }
