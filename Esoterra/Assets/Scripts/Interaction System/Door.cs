@@ -41,9 +41,9 @@ public class Door : Interactable
         displayNameTextBack.GetComponent<TMP_Text>().text = displayName;
 
         interactionVerbText.GetComponent<TMP_Text>().text =
-            interactionVerb + " [" + keyInteract.ToUpper() + "]";
+            interactionVerb + " [" + interactKey.ToUpper() + "]";
         interactionVerbTextBack.GetComponent<TMP_Text>().text =
-            interactionVerb + " [" + keyInteract.ToUpper() + "]";
+            interactionVerb + " [" + interactKey.ToUpper() + "]";
     }
 
     // Show or hide name and verb in-game
