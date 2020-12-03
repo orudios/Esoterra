@@ -6186,7 +6186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 08750cce284416a4a9aaf31e826fe626, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 08750cce284416a4a9aaf31e826fe626, type: 3}
       propertyPath: m_Controller
@@ -6330,7 +6330,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399279418}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af9711accd8068344964b6cdd41e1484, type: 3}
   m_Name: 
@@ -6365,7 +6365,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399279418}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5dcc2cd29d966541ad8d6daf86b9acb, type: 3}
   m_Name: 
@@ -32272,7 +32272,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 06a12adfda274504b8726738cd244583, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 192a3733b1a4318408d3c7099d26fdfb, type: 2}
 --- !u!4 &2037669411
 Transform:
   m_ObjectHideFlags: 0
@@ -32450,7 +32450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2070385299
 MonoBehaviour:
   m_ObjectHideFlags: 0
