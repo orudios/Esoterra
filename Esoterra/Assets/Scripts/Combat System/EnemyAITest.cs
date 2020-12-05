@@ -9,6 +9,7 @@ public class EnemyAITest : MonoBehaviour
     
     public LayerMask groundIndicator, playerIndicator;
     public float attackTimeDelta;
+    //public float walkTimeDelta;
     public float visionRange, attackRange;
     public float targetHealth; 
     //enemy health
@@ -17,6 +18,8 @@ public class EnemyAITest : MonoBehaviour
     //for the enemy to decide whether to chase or attack
     bool attackExecuted; 
     //stops spamming attacks
+
+    bool walkExecuted;
 
     public int attackCondition; 
     //identifies which animation is used for the attack
@@ -34,7 +37,6 @@ public class EnemyAITest : MonoBehaviour
 
     public float distance;
     
-    private AudioSource Walking;
 
     [SerializeField] private playerHealth health;
     private void Start()
@@ -53,7 +55,7 @@ public class EnemyAITest : MonoBehaviour
 
         enemyDead = false;
 
-
+        
     }
 
     private void Update()
@@ -80,16 +82,21 @@ public class EnemyAITest : MonoBehaviour
         
 
         if (distance<=enemyRange){
-
+            
             FacePlayer();
             agent.SetDestination(target.position);
             //chase player if the player is within range
-
+            
             //Debug.Log("Chasing");
-            //if (enemyDead==false){
-                //animator.SetInteger("condition", 1);
+            if (enemyDead==false && walkExecuted==false ){
+                animator.SetInteger("condition", 1);
                 //only play animation of the player is alive
-            //}
+                
+                FindObjectOfType<audioManager>().Play("EnemyWalking"); //choose which sound to play
+                walkExecuted=true;
+                Invoke(nameof(EnemyResetWalk), attackTimeDelta);
+
+            }
             
             if (distance<=agent.stoppingDistance){
                
@@ -122,8 +129,9 @@ public class EnemyAITest : MonoBehaviour
             Debug.Log("attacking player");
 
             if (enemyDead==false){
-                //animator.SetInteger("condition", attackCondition);
+                animator.SetInteger("condition", attackCondition);
                 //if the player is not dead change the animation
+                FindObjectOfType<audioManager>().Play("EnemyAttacking"); //choose which sound to play
             }
 
             health.receiveDamage(10); 
@@ -142,6 +150,12 @@ public class EnemyAITest : MonoBehaviour
         
     }
 
+    private void EnemyResetWalk()
+    {
+        walkExecuted = false;
+        
+    }
+
     public void takeDamage(float damage)
     {
         targetHealth -= damage;
@@ -155,7 +169,7 @@ public class EnemyAITest : MonoBehaviour
                 agent.baseOffset=0;
                 enemy.speed=0;
                 enemy.acceleration=0;
-                //animator.SetInteger("condition", 3);
+                animator.SetInteger("condition", 3);
                 enemyDead=true;
                 //plays death animation and stops enemy from moving
             }
