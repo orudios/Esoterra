@@ -18,6 +18,15 @@ public class playerHealth : MonoBehaviour
     }
     void Death()
     {
+        //show player object
+        GameObject.Find("Ch48_nonPBR").SetActive(true);
+
+        //move camera to third person
+        GameObject.Find("Main Camera").transform.position = new Vector3(transform.position.x-1.5f, transform.position.y-1.5f, transform.position.z-1.5f);
+
+        // death animation
         Debug.Log("Player has died");
     }
+
+    
 }

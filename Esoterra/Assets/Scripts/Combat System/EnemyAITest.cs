@@ -164,8 +164,8 @@ public class EnemyAITest : MonoBehaviour
         if (targetHealth <= 0f)
         {
             if(enemyDead==false){
-                Debug.Log("enemy has died");
-
+                //Debug.Log("enemy has died");
+                //health.displayDeath();
                 agent.baseOffset=0;
                 enemy.speed=0;
                 enemy.acceleration=0;

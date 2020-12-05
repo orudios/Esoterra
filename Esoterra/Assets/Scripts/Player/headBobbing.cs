@@ -37,12 +37,9 @@ public class headBobbing : MonoBehaviour
             totalAxes = Mathf.Abs(horizontalAxis) + Mathf.Abs(verticalAxis);
             totalAxes = Mathf.Clamp(totalAxes, 0.0f, 1.0f);
             translateChange = totalAxes * translateChange;
-            // Vector3 temp =transform.localPosition;
-            // temp.y=5f;
+            
             transform.position=new Vector3(transform.position.x,midpoint + translateChange,transform.position.z);
-
-            //transform.localPosition.y = midpoint + translateChange;
-            //Debug.Log("BOBBY");
+            //movs the camera in th y axis
 
         }
         else{
