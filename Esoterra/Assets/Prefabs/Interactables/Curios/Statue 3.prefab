@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4577701470842260014}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Statue
   interactionVerb: Examine
-  interactionDistance: 4
+  interactionDistance: 4.5
   outlineObject: {fileID: 7055052231850871542}
   displayNameText: {fileID: 300415682195086004}
   interactionVerbText: {fileID: 300415682700586764}

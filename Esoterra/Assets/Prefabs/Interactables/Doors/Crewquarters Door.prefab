@@ -332,7 +332,7 @@ MonoBehaviour:
   outlineObject: {fileID: 8611779498981391067}
   displayNameText: {fileID: 2215530753844073837}
   interactionVerbText: {fileID: 2215530752197959893}
-  keyInteract: e
+  interactKey: e
   audioSources: []
   playerController: {fileID: 0}
   displayNameTextBack: {fileID: 8611779499491765221}
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 2068900901794517778}
   m_Layer: 0
   m_Name: door_2_left
-  m_TagString: InteractiveObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 2068900901794484866}
   m_Layer: 0
   m_Name: door_2_right
-  m_TagString: InteractiveObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

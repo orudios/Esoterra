@@ -25,9 +25,8 @@ public class DialogueUser : Interactable
 
     public override void Interact()
     {
-        if (HasAudio()) {
-            audioSources[0].Play();
-        }
+        // Audio
+        base.Interact();
         
         dialogueManager.AddNewDialogue(displayName, dialogueStrings, nextButtonFinalString);
     }
