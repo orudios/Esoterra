@@ -25,7 +25,7 @@ MonoBehaviour:
   - It's a small desk plant.
   - It looks like it belongs to the dracaena family. They're known for being able
     to tolerate a wide variety of conditions.
-  - You're far from home here, little one...
+  - You are far from home, little one...
   nextButtonFinalString: Leave
   dialogueManager: {fileID: 0}
 --- !u!1 &1066582361764651748
@@ -218,6 +218,10 @@ PrefabInstance:
     - target: {fileID: 403136, guid: 7dd02c12b2c21ff49aa148934b3c1395, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403136, guid: 7dd02c12b2c21ff49aa148934b3c1395, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dd02c12b2c21ff49aa148934b3c1395, type: 3}
