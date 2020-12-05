@@ -23,8 +23,8 @@ MonoBehaviour:
   playerController: {fileID: 0}
   dialogueStrings:
   - It's a small desk plant.
-  - It looks like it belongs to the dracaena family. They're known for being able
-    to tolerate a wide variety of conditions.
+  - Looks like it belongs to the dracaena family. They're known for being able to
+    tolerate a wide variety of conditions.
   - You are far from home, little one...
   nextButtonFinalString: Leave
   dialogueManager: {fileID: 0}
