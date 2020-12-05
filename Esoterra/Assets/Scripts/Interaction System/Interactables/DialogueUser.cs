@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class NPC : Interactable
+public class DialogueUser : Interactable
 {
     [Header("Dialogue Details")]
     [TextArea] public string[] dialogueStrings;
@@ -14,8 +14,7 @@ public class NPC : Interactable
 
     void Reset()
     {
-        interactionDistance = 6f;
-        interactionVerb = "Talk";
+        interactionVerb = "Examine";
     }
 
     public override void Start()
