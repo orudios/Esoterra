@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3998743004375948402}
   m_Layer: 0
-  m_Name: InAthena
+  m_Name: Athena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5435,7 +5435,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.9
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5497,11 +5497,22 @@ MonoBehaviour:
   audioSources: []
   playerController: {fileID: 0}
   dialogueStrings:
-  - ATH... 3.. NA.. rebooting...
+  - 'A-T-H...
+
+    3.. N-A..
+
+    Rebooting...'
   - ATH-3-NA online.
-  - 'Currently we are orbiting: Esoterra.'
-  - 'Olympus structural integrity is: Compromised.'
+  - 'Currently we are orbiting:
+
+
+    Esoterra.'
+  - 'Olympus structural integrity is:
+
+
+    Compromised.'
   nextButtonFinalString: Leave
+  dialogueManager: {fileID: 0}
 --- !u!1 &6535389069135389216
 GameObject:
   m_ObjectHideFlags: 0
