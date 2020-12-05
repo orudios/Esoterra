@@ -8396,6 +8396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  animator: {fileID: 0}
 --- !u!82 &523873870
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18981,7 +18982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3379847a4d2b9c94d8a3b27327b92e21, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3379847a4d2b9c94d8a3b27327b92e21, type: 3}
@@ -20175,7 +20176,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303471149}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 08750cce284416a4a9aaf31e826fe626, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 3379847a4d2b9c94d8a3b27327b92e21, type: 3}
   m_Controller: {fileID: 9100000, guid: 319b492a8eaa9ef4a9e896b24f087ca4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
