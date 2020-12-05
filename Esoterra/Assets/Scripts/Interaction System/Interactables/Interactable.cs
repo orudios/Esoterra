@@ -124,6 +124,8 @@ public class Interactable : MonoBehaviour
 
     public virtual void Interact()
     {
-        // This should be overridden
+        if (HasAudio()){
+            audioSources[0].Play();
+        }
     }
 }
