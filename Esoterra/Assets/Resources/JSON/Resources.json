@@ -1,0 +1,38 @@
+[
+    {
+        "displayName": "Carbon",
+        "ID": 1,
+        "atomicNumber": 6,
+        "symbol": "C"
+    },
+    {
+        "displayName": "Aluminium",
+        "ID": 2,
+        "atomicNumber": 13,
+        "symbol": "Al"
+    },
+    {
+        "displayName": "Silicon",
+        "ID": 3,
+        "atomicNumber": 14,
+        "symbol": "Si"
+    },
+    {
+        "displayName": "Iron",
+        "ID": 4,
+        "atomicNumber": 26,
+        "symbol": "Fe"
+    },
+    {
+        "displayName": "Copper",
+        "ID": 5,
+        "atomicNumber": 29,
+        "symbol": "Cu"
+    },
+    {
+        "displayName": "Blue Matter",
+        "ID": 6,
+        "atomicNumber": 271,
+        "symbol": "BM"
+    }
+]
