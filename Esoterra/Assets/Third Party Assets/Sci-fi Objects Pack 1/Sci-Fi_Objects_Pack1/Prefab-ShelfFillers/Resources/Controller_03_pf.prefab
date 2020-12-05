@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7810192079830890663}
   - component: {fileID: 7848434129988310085}
   - component: {fileID: 6780126204544251193}
-  - component: {fileID: 1909298093216038303}
+  - component: {fileID: 7596241279139278314}
   m_Layer: 0
   m_Name: Controller_03_pf
   m_TagString: Untagged
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1909298093216038303
+--- !u!64 &7596241279139278314
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,4 +95,4 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -1363347511135113584, guid: 13099d9180d8e10448915b444ac2c137, type: 3}
+  m_Mesh: {fileID: -1363347511135113584, guid: e8b0c22a0c578dc4794c5a331cc5313d, type: 3}
