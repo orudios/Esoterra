@@ -15,6 +15,7 @@
 ### Audio
 - [ATH-3-NA Voice](https://texttospeechrobot.com/texttospeechdownloadmp3.html)
 - [Décompression.wav](https://freesound.org/people/davidou/sounds/88495/)
+- [freeSFX](https://freesfx.co.uk/Default.aspx)
 
 ### Fonts
 - [Nasalization](https://www.dafont.com/nasalization.font)
@@ -36,3 +37,4 @@
 ### Miscellaneous
 - [NavMeshComponents](https://github.com/Unity-Technologies/NavMeshComponents)
 - [Sci-Fi Weapons](https://devassets.com/assets/sci-fi-weapons/)
+- [Json.Net.Unity3D](https://github.com/SaladLab/Json.Net.Unity3D)
