@@ -6,7 +6,11 @@ using UnityEngine;
 public class playerHealth : MonoBehaviour
 {
     public float health;
-    // Start is called before the first frame update
+    public Animator animator;
+
+    private void Start(){
+        animator=GetComponent<Animator>();
+    }
 
     public void receiveDamage(float damage)
     {
@@ -19,12 +23,13 @@ public class playerHealth : MonoBehaviour
     void Death()
     {
         //show player object
-        GameObject.Find("Ch48_nonPBR").SetActive(true);
+        //GameObject.Find("Ch48_nonPBR").SetActive(true);
 
         //move camera to third person
         GameObject.Find("Main Camera").transform.position = new Vector3(transform.position.x-1.5f, transform.position.y-1.5f, transform.position.z-1.5f);
 
         // death animation
+        animator.SetInteger("condition", 3);
         Debug.Log("Player has died");
     }
 
