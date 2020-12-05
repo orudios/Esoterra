@@ -20,8 +20,10 @@ public class PlayerMovement : MonoBehaviour
 
     public float walkTimeDelta;
     
+    
     void Start(){
         playerWalking = gameObject.GetComponent<AudioSource>();
+        
     }
 
     void Update()
@@ -43,7 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (horizontalAxis!=0 || verticalAxis!=0){
             //if the player is moving
-            
+            //FindObjectOfType<audioManager>().Play("PlayerWalking"); //choose which sound to play
+            //Debug.Log("Player moving");
             if (!playerWalking.isPlaying){
                 //playerWalking.volume=Random.Range(0.8f,1);
                 //playerWalking.pitch=Random.Range(0.8f, 1.2f);
@@ -55,7 +58,8 @@ public class PlayerMovement : MonoBehaviour
             }
             //playerWalking.Play();
             
-        }        
+        }  
+              
         //playerWalking.Play();
         //the problem is that it plays the auto so fast that it seems like its a long buzz
         // must space the time out
