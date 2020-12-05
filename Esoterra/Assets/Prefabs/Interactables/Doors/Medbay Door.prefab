@@ -132,13 +132,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04c9e5f8ed66fd43b38c98538387c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionDistance: 5
-  outlineObject: {fileID: 3098122373541578539}
   displayName: Door
   interactionVerb: Open
+  interactionDistance: 5
+  outlineObject: {fileID: 3098122373541578539}
   displayNameText: {fileID: 8180180297690570460}
   interactionVerbText: {fileID: 3974289873360245772}
-  keyInteract: e
+  interactKey: e
   audioSources: []
   playerController: {fileID: 0}
   displayNameTextBack: {fileID: 4481213806988074632}
