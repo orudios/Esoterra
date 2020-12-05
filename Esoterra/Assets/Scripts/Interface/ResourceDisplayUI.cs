@@ -22,7 +22,7 @@ public class ResourceDisplayUI : MonoBehaviour
     void Start()
     {
         resource = prefab.transform.GetComponentInChildren<Resource>();
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
         
         SetImage();
         SetText();

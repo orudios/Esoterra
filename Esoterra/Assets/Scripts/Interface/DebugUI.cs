@@ -20,7 +20,7 @@ public class DebugUI : MonoBehaviour
     void Start()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-	    inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+	    inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
     }
 
     void Update()
@@ -56,11 +56,11 @@ public class DebugUI : MonoBehaviour
             if (Input.GetKey(i.ToString())) {
                 // + add
                 if (Input.GetKeyDown(KeyCode.Plus) || Input.GetKeyDown(KeyCode.KeypadPlus)) {
-                    inventory.AddItem(i, 1);
+                    inventory.AddResource(i, 1);
                 }
                 // - remove
                 else if (Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown(KeyCode.KeypadMinus)) {
-                    inventory.RemoveItem(i, 1);
+                    inventory.RemoveResource(i, 1);
                 }
             }
         }
@@ -68,7 +68,7 @@ public class DebugUI : MonoBehaviour
         if (Input.GetKey("7")) {
             if (Input.GetKeyDown(KeyCode.Plus) || Input.GetKeyDown(KeyCode.KeypadPlus)) {
                 for (int i = 1; i <= 6; i++) {
-                    inventory.AddItem(i, 7);
+                    inventory.AddResource(i, 7);
                 }
             }
         }

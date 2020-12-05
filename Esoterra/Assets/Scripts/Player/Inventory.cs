@@ -4,37 +4,59 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    // Store Item IDs and their quantity
+    // Store Resource IDs and their quantity
     Dictionary<int, int> inventory = new Dictionary<int, int>();
 
+    // Audio
+    AudioSource[] audioSources;
+    AudioSource audioCollectResource;
+
+    
+    void Awake()
+    {
+        audioSources = gameObject.GetComponents<AudioSource>();
+        ConfigureAudio();
+    }
+
+    void ConfigureAudio()
+    {
+        if (audioSources.Length > 0) {
+            audioCollectResource = audioSources[0];
+        }
+    }
+    
     public int Quantity(int ID)
     {
-        // If this item is in the dictionary, return the quantity
+        // If this resource is in the dictionary, return the quantity
         if (inventory.ContainsKey(ID)) {
             return inventory[ID];
-        // Otherwise, dictionary doesn't contain the item
+        // Otherwise, dictionary doesn't contain the resource
         } else {
             return 0;
         }
     }
     
-    public void AddItem(int ID, int amount)
+    public void AddResource(int ID, int amount)
     {
-        // None of this item: add the new item and amount to dictionary
+        // None of this resource: add the new resource and amount to dictionary
         if (Quantity(ID) == 0) {
             inventory.Add(ID, amount);
         // Otherwise, increase the quantity
         } else {
             inventory[ID] += amount;
         }
+
+        if (audioCollectResource != null) {
+            audioCollectResource.Play();
+        }
     }
 
-    public bool RemoveItem(int ID, int amount)
+    public bool RemoveResource(int ID, int amount)
     {
-        // None of this item: failure; no change
+        // None of this resource: failure; no change
         if (Quantity(ID) == 0) {
             return false;
-        // Exact amount: success; completely remove the item from dictionary
+        // Exact amount: success; completely remove the resource from dictionary
         } else if (Quantity(ID) == amount) {
             inventory.Remove(ID);
             return true;
