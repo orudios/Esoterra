@@ -140,10 +140,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_audioClip: {fileID: 8300000, guid: 06b0cf49bb49917429d8e283bdec7289, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
 =======
+=======
+>>>>>>> main
 =======
 >>>>>>> main
   m_audioClip: {fileID: 8300000, guid: 193a1fbd71d865c4e975aaad621022f1, type: 3}
@@ -195,7 +198,11 @@ AudioSource:
       time: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0
+=======
+      value: 0.9
+>>>>>>> main
 =======
       value: 0.9
 >>>>>>> main
