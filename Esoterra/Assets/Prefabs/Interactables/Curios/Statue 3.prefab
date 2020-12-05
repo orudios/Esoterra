@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Statue
   interactionVerb: Examine
-  interactionDistance: 4
+  interactionDistance: 4.5
   outlineObject: {fileID: 7055052231850871542}
   displayNameText: {fileID: 300415682195086004}
   interactionVerbText: {fileID: 300415682700586764}
