@@ -109,6 +109,9 @@ public class Repairable : Interactable
 
     public virtual void Repair()
     {
+        // Subtype should tell EventManager its specific type
+        // EventManager.Repaired("Repairable");
+
         broken = false;
 
         if (audioRepair != null) {

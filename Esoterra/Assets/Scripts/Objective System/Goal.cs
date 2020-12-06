@@ -12,7 +12,10 @@ public class Goal
     public bool Completed {get; set;}
 
 
-    public virtual void Init(){}
+    public virtual void Init()
+    {
+        // EventManager.event += CurrentAmount++ method of Goal subtype
+    }
 
     public void CheckGoalComplete()
     {
