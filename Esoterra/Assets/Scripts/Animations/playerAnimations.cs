@@ -11,20 +11,24 @@ public class playerAnimations : MonoBehaviour
 
     private float currentHealth;
 
-    Transform target; 
+    public float cameraRotation;
+    Transform playerTarget; 
     //Enemy reference
     void Start()
     {
         animator=GetComponent<Animator>();
-        ///health=gameObject.Find("Player").GetComponent<playerHealth>();
-        target = GameObject.Find("New Enemy").transform;
-        // this is a script that keeps track of where the player is
+        
+
+        GameObject.Find("Ch50_nonPBR").transform.position = new Vector3(100, 0,0);
+        //GameObject.Find("Ch50_nonPBR").SetActive(true);
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        playerTarget = GameObject.Find("Ch50_nonPBR").transform;
         currentHealth = health.health;
         if (currentHealth>0){
             if (Input.GetAxis("Horizontal")>0||Input.GetAxis("Vertical")>0){
@@ -35,23 +39,26 @@ public class playerAnimations : MonoBehaviour
                 animator.SetInteger("condition",0);
             }
         }else{
-            GameObject.Find("Ch50_nonPBR").SetActive(true);
+            GameObject.Find("Ch50_nonPBR").transform.position = GameObject.Find("Main Camera").transform.position;
             //set player object visible
+            Cursor.lockState = CursorLockMode.Locked;
             GameObject.Find("Main Camera").transform.position = new Vector3(transform.position.x-1.5f, transform.position.y-1.5f, transform.position.z-1.5f);
+           // GameObject.Find("Main Camera").transform.position = new Vector3(transform.position.x-0.1f, transform.position.y-7f, transform.position.z-0.1f);
             //Move the camera to third person
 
-            Vector3 direction = (target.position - GameObject.Find("Main Camera").transform.position).normalized;
+            Vector3 direction = (playerTarget.position - GameObject.Find("Main Camera").transform.position).normalized;
             //player direction
 
             Quaternion rotate = Quaternion.LookRotation(new Vector3(direction.x,0, direction.z));
             //which way we rotate
 
-            GameObject.Find("Main Camera").transform.rotation = Quaternion.Slerp(GameObject.Find("Main Camera").transform.rotation, rotate, Time.deltaTime * 5f);
+            GameObject.Find("Main Camera").transform.rotation = Quaternion.Slerp(transform.rotation, rotate, Time.deltaTime * 5f);
             //update camera direction
 
             
-
+            //GameObject.Find("Main Camera").transform.localRotation = Quaternion.Euler(0, cameraRotation, 0);
             animator.SetInteger("condition", 3);
+            //Cursor.lockState = CursorLockMode.Locked;
             //animate
         }
     }

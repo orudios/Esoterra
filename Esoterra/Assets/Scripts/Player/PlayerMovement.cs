@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         // }
         if (horizontalAxis!=0 || verticalAxis!=0){
             //if the player is moving
-
+            //GameObject.Find("Ch50_nonPBR").SetActive(false);
             if (!playerWalking.isPlaying){
                 //playerWalking.volume=Random.Range(0.8f,1);
                 //playerWalking.pitch=Random.Range(0.8f, 1.2f);
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
             }
             
         }  
-        
+        //GameObject.Find("Ch50_nonPBR").SetActive(true);
         // Code governing jumping - ensures the player is grounded (by checking if they are on a groundIndicator)
         if(Input.GetButtonDown("Jump") && grounded)
         {
