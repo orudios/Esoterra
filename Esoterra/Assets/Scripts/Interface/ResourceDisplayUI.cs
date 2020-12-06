@@ -22,35 +22,17 @@ public class ResourceDisplayUI : MonoBehaviour
     void Start()
     {
         resource = prefab.transform.GetComponentInChildren<Resource>();
+
         inventory =
             GameObject.FindGameObjectWithTag("Player")
             .GetComponentInChildren<Inventory>();
         
-        SetImage();
         SetText();
     }
 
     void Update()
     {
         TryUpdateQuantity();
-    }
-
-    void SetImage()
-    {
-        // Make a sprite from prefab preview
-        Texture2D texture = UnityEditor.AssetPreview.GetAssetPreview(prefab);
-        while (texture == null) {
-            System.Threading.Thread.Sleep(10);
-            texture = UnityEditor.AssetPreview.GetAssetPreview(prefab);
-        }
-        Sprite sprite = Sprite.Create(
-            texture,
-            new Rect(0.0f, 0.0f, texture.width, texture.height),
-            new Vector2(0.5f, 0.5f),
-            100.0f
-        );
-        // Set the sprite as image on this object
-        gameObject.GetComponent<Image>().sprite = sprite;
     }
 
     void SetText()
