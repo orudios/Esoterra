@@ -8,10 +8,14 @@ public class MouseLook : MonoBehaviour
     private float xRotation = 0f;
     public float mouseSensitivity = 100f;
 
+    public GameOver gameOver;
+
     // Locks the cursor to the game view inside Unity to prevent it from escaping
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        if (gameOver.gameOver == false){
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     // Code that enables 3D first person camera movement
@@ -25,5 +29,9 @@ public class MouseLook : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
         playerBody.Rotate(Vector3.up * mouseX);
+
+        if (gameOver.gameOver == true){
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }

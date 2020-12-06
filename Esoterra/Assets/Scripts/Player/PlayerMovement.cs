@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         // if (currentHealth >0){
             controller.Move(playerMovement * playerSpeed * Time.deltaTime);
         // }
-        if (horizontalAxis!=0 || verticalAxis!=0){
+        if (health.health>0 && (horizontalAxis!=0 || verticalAxis!=0)){
             //if the player is moving
             //GameObject.Find("Ch50_nonPBR").SetActive(false);
             if (!playerWalking.isPlaying){

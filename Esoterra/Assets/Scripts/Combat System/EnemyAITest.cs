@@ -37,7 +37,7 @@ public class EnemyAITest : MonoBehaviour
 
     public float distance;
     
-
+    
     [SerializeField] private playerHealth health;
     private void Start()
     {
@@ -65,7 +65,7 @@ public class EnemyAITest : MonoBehaviour
         playerWithinAttackRange = Physics.CheckSphere(transform.position, attackRange, playerIndicator);
 
         
-        if (enemyDead == false){
+        if (enemyDead == false && health.health>0){
             //if the player is not dead
 
             distance = Vector3.Distance(target.position, transform.position);
