@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float walkTimeDelta;
     
+    public playerHealth health;
+    private float currentHealth;
     
     void Start(){
         playerWalking = gameObject.GetComponent<AudioSource>();
@@ -36,17 +38,17 @@ public class PlayerMovement : MonoBehaviour
         {
             playerVelocity.y = -2f;
         }
-
-        // Defining core movement using the CharacterController
+        
         float horizontalAxis = Input.GetAxis("Horizontal");
         float verticalAxis = Input.GetAxis("Vertical");
         Vector3 playerMovement = transform.right * horizontalAxis + transform.forward * verticalAxis;
-        controller.Move(playerMovement * playerSpeed * Time.deltaTime);
-
+        // currentHealth = health.health;
+        // if (currentHealth >0){
+            controller.Move(playerMovement * playerSpeed * Time.deltaTime);
+        // }
         if (horizontalAxis!=0 || verticalAxis!=0){
             //if the player is moving
-            //FindObjectOfType<audioManager>().Play("PlayerWalking"); //choose which sound to play
-            //Debug.Log("Player moving");
+
             if (!playerWalking.isPlaying){
                 //playerWalking.volume=Random.Range(0.8f,1);
                 //playerWalking.pitch=Random.Range(0.8f, 1.2f);
@@ -56,14 +58,8 @@ public class PlayerMovement : MonoBehaviour
                 Invoke(nameof(PlayerResetSound), walkTimeDelta);
                 //stops spamming the walking sound
             }
-            //playerWalking.Play();
             
         }  
-              
-        //playerWalking.Play();
-        //the problem is that it plays the auto so fast that it seems like its a long buzz
-        // must space the time out
-        // watch a tutorial
         
         // Code governing jumping - ensures the player is grounded (by checking if they are on a groundIndicator)
         if(Input.GetButtonDown("Jump") && grounded)
