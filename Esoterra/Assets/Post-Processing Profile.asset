@@ -88,10 +88,10 @@ MonoBehaviour:
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 280
+    value: 360
   sampleCount:
     overrideState: 1
-    value: 30
+    value: 32
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1520,7 +1520,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.42
+    value: 0.69
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
