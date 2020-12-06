@@ -19,8 +19,12 @@ public class DebugUI : MonoBehaviour
 
     void Start()
     {
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-	    inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
+        playerController =
+            GameObject.FindGameObjectWithTag("Player")
+            .GetComponent<PlayerController>();
+	    inventory =
+            GameObject.FindGameObjectWithTag("Player")
+            .GetComponentInChildren<Inventory>();
     }
 
     void Update()

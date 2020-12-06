@@ -12,7 +12,7 @@ public class DialogueUser : Interactable
     [HideInInspector] public DialogueManager dialogueManager;
 
 
-    void Reset()
+    public virtual void Reset()
     {
         interactionVerb = "Examine";
     }

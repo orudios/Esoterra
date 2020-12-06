@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Vending Machine
   interactionVerb: Examine
-  interactionDistance: 4.5
+  interactionDistance: 5.5
   outlineObject: {fileID: 4922337945682103229}
   displayNameText: {fileID: 2903454317060961209}
   interactionVerbText: {fileID: 2903454315477517825}
