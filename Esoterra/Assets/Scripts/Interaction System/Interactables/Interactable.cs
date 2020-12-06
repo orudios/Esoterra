@@ -100,7 +100,7 @@ public class Interactable : MonoBehaviour
     void TryOutline()
     {
         if (CanInteract()) {
-            outlineObject.layer = LayerMask.NameToLayer("Outline");
+            outlineObject.layer = LayerMask.NameToLayer("PostProcessing");
         } else {
             outlineObject.layer = LayerMask.NameToLayer("Default");
         }
