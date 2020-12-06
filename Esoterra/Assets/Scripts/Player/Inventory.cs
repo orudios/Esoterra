@@ -45,6 +45,7 @@ public class Inventory : MonoBehaviour
         } else {
             inventory[ID] += amount;
         }
+        EventManager.ResourceCollected(ID);
 
         if (audioCollectResource != null) {
             audioCollectResource.Play();

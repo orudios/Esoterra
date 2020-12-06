@@ -61,9 +61,13 @@ public class Repairable : Interactable
     public override void Start()
     {
         base.Start();
-        repairManager = GameObject.Find("UI/Canvas/TextMenu").GetComponent<RepairManager>();
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
-    }
+        repairManager =
+            GameObject.Find("UI/Canvas/TextMenu")
+            .GetComponent<RepairManager>();
+        inventory =
+            GameObject.FindGameObjectWithTag("Player")
+            .GetComponentInChildren<Inventory>();
+        }
 
     // Update based on required Resources and quantities
     void UpdateBodyString()

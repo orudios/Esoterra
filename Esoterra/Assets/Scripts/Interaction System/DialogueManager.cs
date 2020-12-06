@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] public string displayName;
     [HideInInspector] public int dialoguePosition;
     [HideInInspector] public string nextButtonFinalString;
-    bool inDialogue = false;
+    [HideInInspector] public bool inDialogue = false;
 
     // Disable during dialogue
     MouseLook playerMouseLook;
