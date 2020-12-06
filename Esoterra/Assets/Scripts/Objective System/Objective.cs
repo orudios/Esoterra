@@ -12,7 +12,9 @@ public class Objective : MonoBehaviour
 
     // Optional to change in subclass
     public List<int> ResourceRewards {get; set;} = new List<int>();
-    public string[] NotCompletedDialogue {get; set;} = {"You haven't completed the objective."};
+    public string[] NotCompletedDialogue {get; set;} = new string[]{
+        "You haven't completed the objective.",
+        "Here's your progress right now..."};
     public string[] JustCompletedDialogue {get; set;} = {"You have completed the objective!"};
     public string[] CompletedDialogue {get; set;} = {"You have already completed this objective."};
 
@@ -26,6 +28,29 @@ public class Objective : MonoBehaviour
         inventory =
             GameObject.FindGameObjectWithTag("Player")
             .GetComponentInChildren<Inventory>();
+    }
+
+    // Return an array of the Goals and their progress to be used in dialogue
+    public string[] GoalsStrings()
+    {
+        List<string> goalsStrings = new List<string>();
+        foreach (Goal g in Goals) {
+            goalsStrings.Add(g.Description + " (" + g.CurrentAmount + "/" + g.RequiredAmount + ")");
+        }
+        return goalsStrings.ToArray();
+    }
+
+    // Return an array of Goals and their progress, along with some dialogue to show first
+    public string[] GoalsStrings(string[] initialDialogue)
+    {
+        List<string> goalsStrings = new List<string>();
+        foreach (string dialogue in initialDialogue) {
+            goalsStrings.Add(dialogue);
+        }
+        foreach (Goal g in Goals) {
+            goalsStrings.Add(g.Description + " (" + g.CurrentAmount + "/" + g.RequiredAmount + ")");
+        }
+        return goalsStrings.ToArray();
     }
     
     public void CheckGoalsCompleted()

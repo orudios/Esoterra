@@ -73,13 +73,18 @@ public class ObjectiveGiver : DialogueUser
             Completed = true;
             MyObjective.GiveReward();
             dialogueManager.AddNewDialogue(
-                displayName, MyObjective.JustCompletedDialogue, nextButtonFinalString
+                displayName,
+                MyObjective.JustCompletedDialogue,
+                nextButtonFinalString
             );
 
         // Not complete yet
         } else {
             dialogueManager.AddNewDialogue(
-                displayName, MyObjective.NotCompletedDialogue, nextButtonFinalString
+                displayName,
+                // Use GoalsStrings to get player's up to date progress on the Objective
+                MyObjective.GoalsStrings(MyObjective.NotCompletedDialogue),
+                nextButtonFinalString
             );
         }
     }
