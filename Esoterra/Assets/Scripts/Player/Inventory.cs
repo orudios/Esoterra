@@ -38,6 +38,8 @@ public class Inventory : MonoBehaviour
     
     public void AddResource(int ID, int amount)
     {
+        EventManager.ResourceCollected(ID);
+        
         // None of this resource: add the new resource and amount to dictionary
         if (Quantity(ID) == 0) {
             inventory.Add(ID, amount);
@@ -45,7 +47,6 @@ public class Inventory : MonoBehaviour
         } else {
             inventory[ID] += amount;
         }
-        EventManager.ResourceCollected(ID);
 
         if (audioCollectResource != null) {
             audioCollectResource.Play();

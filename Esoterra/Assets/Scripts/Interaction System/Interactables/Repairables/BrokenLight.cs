@@ -16,6 +16,7 @@ public class BrokenLight : Repairable
 
     public override void Repair()
     {
+        EventManager.Repaired("BrokenLight");
         gameObject.GetComponent<FlickeringLight>().enabled = false;
         base.Repair();
     }
