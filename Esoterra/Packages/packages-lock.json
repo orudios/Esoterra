@@ -46,6 +46,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.postprocessing": {
+      "version": "2.3.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.probuilder": {
       "version": "4.4.0",
       "depth": 0,
@@ -67,6 +74,13 @@
     "com.unity.settings-manager": {
       "version": "1.0.3",
       "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.terrain-tools": {
+      "version": "3.0.2-preview.3",
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
