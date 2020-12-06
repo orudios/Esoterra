@@ -14,7 +14,7 @@ public class Repairable : Interactable
 
     // To be displayed in the body of the repair UI
     string bodyString;
-    bool broken;
+    [HideInInspector] public bool broken;
 
     // Audio
     AudioSource audioRepair;
