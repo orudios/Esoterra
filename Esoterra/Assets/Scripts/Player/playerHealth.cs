@@ -19,7 +19,7 @@ public class playerHealth : MonoBehaviour
     public void receiveDamage(float damage)
     {
         health -= damage;
-        Debug.Log(health);
+        //Debug.Log(health);
         // if (health <= 0f)
         // {
         //     Death();

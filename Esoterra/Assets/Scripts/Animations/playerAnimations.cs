@@ -19,8 +19,9 @@ public class playerAnimations : MonoBehaviour
         animator=GetComponent<Animator>();
         
 
-        GameObject.Find("Ch50_nonPBR").transform.position = new Vector3(100, 0,0);
+        //GameObject.Find("Ch50_nonPBR").transform.position = new Vector3(100, 0,0);
         //GameObject.Find("Ch50_nonPBR").SetActive(true);
+        GameObject.Find("Ch50_nonPBR").transform.localScale = new Vector3(0, 0, 0);
 
 
     }
@@ -39,21 +40,24 @@ public class playerAnimations : MonoBehaviour
                 animator.SetInteger("condition",0);
             }
         }else{
-            GameObject.Find("Ch50_nonPBR").transform.position = GameObject.Find("Main Camera").transform.position;
+            //GameObject.Find("Ch50_nonPBR").transform.position = GameObject.Find("Main Camera").transform.position;
+            GameObject.Find("Ch50_nonPBR").transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
+            //GetComponent<>
             //set player object visible
             Cursor.lockState = CursorLockMode.Locked;
-            GameObject.Find("Main Camera").transform.position = new Vector3(transform.position.x-1.5f, transform.position.y-1.5f, transform.position.z-1.5f);
-           // GameObject.Find("Main Camera").transform.position = new Vector3(transform.position.x-0.1f, transform.position.y-7f, transform.position.z-0.1f);
+            //GameObject.Find("Main Camera").transform.position = new Vector3(transform.position.x-1.5f, transform.position.y-1.5f, transform.position.z-1.5f);
+            GameObject.Find("Main Camera").transform.Rotate(0,0,90);
+            //GameObject.Find("Main Camera").transform.rotation = Quaternion.Euler(new Vector3(0,0,90));
             //Move the camera to third person
 
-            Vector3 direction = (playerTarget.position - GameObject.Find("Main Camera").transform.position).normalized;
-            //player direction
+            // Vector3 direction = (playerTarget.position - GameObject.Find("Main Camera").transform.position).normalized;
+            // //player direction
 
-            Quaternion rotate = Quaternion.LookRotation(new Vector3(direction.x,0, direction.z));
-            //which way we rotate
+            // Quaternion rotate = Quaternion.LookRotation(new Vector3(direction.x,0, direction.z));
+            // //which way we rotate
 
-            GameObject.Find("Main Camera").transform.rotation = Quaternion.Slerp(transform.rotation, rotate, Time.deltaTime * 5f);
-            //update camera direction
+            // GameObject.Find("Main Camera").transform.rotation = Quaternion.Slerp(transform.rotation, rotate, Time.deltaTime * 5f);
+            // //update camera direction
 
             
             //GameObject.Find("Main Camera").transform.localRotation = Quaternion.Euler(0, cameraRotation, 0);
@@ -64,7 +68,7 @@ public class playerAnimations : MonoBehaviour
     }
 
     public void playDeath(){
-        Debug.Log("Playing death");
+        //Debug.Log("Playing death");
         animator.SetInteger("condition", 3);
     }
 

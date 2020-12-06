@@ -128,10 +128,14 @@ public class EnemyAITest : MonoBehaviour
  
             Debug.Log("attacking player");
 
-            if (enemyDead==false){
+            if (enemyDead==false && health.health >0){
                 animator.SetInteger("condition", attackCondition);
                 //if the player is not dead change the animation
                 FindObjectOfType<audioManager>().Play("EnemyAttacking"); //choose which sound to play
+            }
+            else{
+                animator.SetInteger("condition", 0);
+                FindObjectOfType<audioManager>().Play("Silence");
             }
 
             health.receiveDamage(10); 
