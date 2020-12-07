@@ -32655,10 +32655,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7727949197740647459, guid: 55dd0e9f861cd874c98e29535ef58f4e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727949197740647459, guid: 55dd0e9f861cd874c98e29535ef58f4e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727949197740647459, guid: 55dd0e9f861cd874c98e29535ef58f4e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 7833318467219866544, guid: 55dd0e9f861cd874c98e29535ef58f4e, type: 3}
       propertyPath: health
       value: 
       objectReference: {fileID: 523873869}
+    - target: {fileID: 7833318467219866544, guid: 55dd0e9f861cd874c98e29535ef58f4e, type: 3}
+      propertyPath: targetHealth
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55dd0e9f861cd874c98e29535ef58f4e, type: 3}
 --- !u!1001 &8601563429091797017
@@ -32668,6 +32684,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 638736185312307905, guid: 4caf2a14bb972cf44a38c2c75f5416e0, type: 3}
+      propertyPath: playerJumpHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 638736185312307916, guid: 4caf2a14bb972cf44a38c2c75f5416e0, type: 3}
       propertyPath: m_Name
       value: Player-Amin
@@ -32715,6 +32735,14 @@ PrefabInstance:
     - target: {fileID: 638736185312307918, guid: 4caf2a14bb972cf44a38c2c75f5416e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601563429826182132, guid: 4caf2a14bb972cf44a38c2c75f5416e0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601563429826182132, guid: 4caf2a14bb972cf44a38c2c75f5416e0, type: 3}
+      propertyPath: speed
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4caf2a14bb972cf44a38c2c75f5416e0, type: 3}
