@@ -66,7 +66,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.151
+    value: 0.069
   fastMode:
     overrideState: 1
     value: 0
@@ -159,13 +159,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 2.5
+    value: 1.88
   threshold:
     overrideState: 1
-    value: 1
+    value: 0.69
   softKnee:
     overrideState: 1
-    value: 0.926
+    value: 0.512
   clamp:
     overrideState: 1
     value: 65472
@@ -1560,7 +1560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f6f3f7c722b4544b97e3c75840aa33, type: 3}
   m_Name: AutoExposure
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
