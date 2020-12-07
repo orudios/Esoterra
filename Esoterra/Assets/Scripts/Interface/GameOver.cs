@@ -8,6 +8,9 @@ public class GameOver : MonoBehaviour
 
     public GameObject gameOverUI;
 
+    void Start(){
+        Cursor.visible = true;
+    }
     
     void Update()
     {
