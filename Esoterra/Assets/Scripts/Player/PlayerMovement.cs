@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
     public float playerSpeed = 12f;
     public float gravityConstant = -9.81f;
-    public float playerJumpHeight = 1f;
+    public float playerJumpHeight = 2f;
     public float playerSprintBoost = 2.2f;
 
     // groundChecker to serve as an addition to the CharacterController and aid with ground detection
@@ -42,10 +42,7 @@ public class PlayerMovement : MonoBehaviour
         float horizontalAxis = Input.GetAxis("Horizontal");
         float verticalAxis = Input.GetAxis("Vertical");
         Vector3 playerMovement = transform.right * horizontalAxis + transform.forward * verticalAxis;
-        // currentHealth = health.health;
-        // if (currentHealth >0){
-            controller.Move(playerMovement * playerSpeed * Time.deltaTime);
-        // }
+        controller.Move(playerMovement * playerSpeed * Time.deltaTime);
         if (health.health>0 && (horizontalAxis!=0 || verticalAxis!=0)){
             //if the player is moving
             //GameObject.Find("Ch50_nonPBR").SetActive(false);
