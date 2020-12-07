@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
@@ -28,6 +29,11 @@ public class GameOver : MonoBehaviour
     }
 
     public void LoadMenu(){
-        Debug.Log("Load menu");
+        Time.timeScale = 1f; //unpauses game
+        SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
+    }
+
+    public void quitGame(){
+        Application.Quit();
     }
 }
