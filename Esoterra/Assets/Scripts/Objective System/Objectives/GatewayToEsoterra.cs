@@ -5,13 +5,20 @@ using UnityEngine;
 
 public class GatewayToEsoterra : Objective
 {
-    public GameObject teleporter;
+    GameObject teleporter;
 
 
     public override void Start()
     {
         base.Start();
 
+        // Enable repair when this Objective is started
+        GameObject.Find("Compressor Tube Slow/Compressor Tube")
+            .GetComponent<CompressorTube>().enabled = true;
+        GameObject.Find("Compressor Tube Fast/Compressor Tube")
+            .GetComponent<CompressorTube>().enabled = true;
+
+        // Enable repair when this Objective is complete
         teleporter = GameObject.Find("Teleporter (Olympus)");
 
         Name = "Gateway to Esoterra";
@@ -42,8 +49,7 @@ public class GatewayToEsoterra : Objective
         };
 
         AlreadyCompletedDialogue = new string[]{
-            "I have given you Blue Matter. Go to the Bridge just beyond my room and insert this into the teleporter.",
-            "If the lost teleporter remains functional, the Bridge teleporter will transport you from here to there.",
+            "I have given you Blue Matter. Insert this into the teleporter behind you. If the lost teleporter remains functional, the Bridge teleporter will transport you from here to there.",
             "This is your final task on Olympus.",
             "This is your gateway to Esoterra."
         };

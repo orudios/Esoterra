@@ -12,8 +12,10 @@ public class ObjectiveGiver : DialogueUser
     [Header("Objective Giver Details")]
     [Tooltip("Objective script (class name) to give to player.")]
     public string objectiveScript;
-    [Tooltip("Audio clip to use after the first interaction has been done.")]
-    public AudioClip nextAudioClip;
+    [Tooltip("Clip to use after the first interaction when the objective has been given.")]
+    public AudioClip objectiveAudioClip;
+    [Tooltip("Clip to use after the objective has been completed.")]
+    public AudioClip completedAudioClip;
 
     // Object in the hierarchy which stores the player's objectives
     GameObject playerObjectives;
@@ -39,23 +41,23 @@ public class ObjectiveGiver : DialogueUser
     {
         // Never interacted with this giver before
         if (!Given && !Completed) {
-            // Audio and original dialogue
+            // Original dialogue and audio
             base.Interact();
             GiveObjective();
         }
 
-        // Change audio after interacting for the first time
+        // Change audio after interacting based on state
 
-        // Have interacted, but not completed the objective
+        // Have interacted and received the objective, but not completed it
         else if (Given && !Completed) {
-            audioSources[0].clip = nextAudioClip;
+            audioSources[0].clip = objectiveAudioClip;
             if (HasAudio()) audioSources[0].Play();
             CheckObjective();
         }
 
         // Have interacted and completed the objective
         else {
-            audioSources[0].clip = nextAudioClip;
+            audioSources[0].clip = completedAudioClip;
             if (HasAudio()) audioSources[0].Play();
 
             dialogueManager.AddNewDialogue(
