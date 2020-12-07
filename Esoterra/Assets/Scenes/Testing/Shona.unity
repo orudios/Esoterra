@@ -163,11 +163,6 @@ Transform:
   m_Father: {fileID: 996858761}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &112442283 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6535389069135509214, guid: 15ec843575ad3fc4188983aae2b521d2, type: 3}
-  m_PrefabInstance: {fileID: 1547146119}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &115870720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3081,12 +3076,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Athena
       objectReference: {fileID: 0}
-    - target: {fileID: 6535389069135385585, guid: 15ec843575ad3fc4188983aae2b521d2, type: 3}
-      propertyPath: m_Volume
-      value: 0.6
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1420978969, guid: 15ec843575ad3fc4188983aae2b521d2, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15ec843575ad3fc4188983aae2b521d2, type: 3}
 --- !u!1001 &1556405435
 PrefabInstance:
@@ -3360,28 +3350,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
---- !u!114 &1694903915 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3998743005148551989, guid: 15ec843575ad3fc4188983aae2b521d2, type: 3}
-  m_PrefabInstance: {fileID: 1547146119}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1704088518 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3998743005148551988, guid: 15ec843575ad3fc4188983aae2b521d2, type: 3}
-  m_PrefabInstance: {fileID: 1547146119}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1720515456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 428906, guid: a5cd29a93d7ae2d488fa0376d0d08462, type: 3}
@@ -3873,51 +3841,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 469248, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
   m_PrefabInstance: {fileID: 499747169}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1947626428 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6535389069135385550, guid: 15ec843575ad3fc4188983aae2b521d2, type: 3}
-  m_PrefabInstance: {fileID: 1547146119}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1947626430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947626428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f50f68ab3b7bc5429a75356c0115ca2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayName: ATH-3-NA
-  interactionVerb: Talk
-  interactionDistance: 6
-  outlineObject: {fileID: 112442283}
-  displayNameText: {fileID: 1704088518}
-  interactionVerbText: {fileID: 1694903915}
-  interactKey: e
-  audioSources: []
-  playerController: {fileID: 0}
-  dialogueStrings:
-  - 'A-T-H...
-
-    3.. N-A..
-
-    Rebooting...'
-  - ATH-3-NA online.
-  - 'Currently we are orbiting:
-
-
-    Esoterra.'
-  - 'Olympus structural integrity is:
-
-
-    Compromised.'
-  nextButtonFinalString: Leave
-  dialogueManager: {fileID: 0}
-  objectiveScript: GatewayToEsoterra
-  nextAudioClip: {fileID: 8300000, guid: 2f51791557d907d4a8fff6b05b0d948f, type: 3}
 --- !u!1 &1973956708
 GameObject:
   m_ObjectHideFlags: 0
