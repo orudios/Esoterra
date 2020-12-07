@@ -23,7 +23,6 @@ public class EventManager : MonoBehaviour
     
     public static void Repaired(string repairableType)
     {
-        Debug.Log("EventManager.Repaired(" + repairableType + ")");
         if (OnRepair != null) {
             OnRepair(repairableType);
         }

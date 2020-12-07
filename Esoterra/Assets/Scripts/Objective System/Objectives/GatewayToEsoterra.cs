@@ -5,17 +5,23 @@ using UnityEngine;
 
 public class GatewayToEsoterra : Objective
 {
+    public GameObject teleporter;
+
+
     public override void Start()
     {
         base.Start();
 
-        // Mandatory
+        teleporter = GameObject.Find("Teleporter (Olympus)");
+
         Name = "Gateway to Esoterra";
         Description = "Go to the storage room and repair the Blue Matter Compressor";
         Goals.Add(new RepairGoal(this, 2, "CompressorTube", "Repair 2 Blue Matter Compressor Tubes.", 0, false));
         foreach (Goal g in Goals) {
             g.Init();
         }
+
+        ResourceRewards.Add(6);
 
         NotCompletedDialogue = new string[]{
             "I'm trying to command the Blue Matter Compressor, but I can't connect.",
@@ -41,5 +47,12 @@ public class GatewayToEsoterra : Objective
             "This is your final task on Olympus.",
             "This is your gateway to Esoterra."
         };
+    }
+
+    public override void GiveReward()
+    {
+        base.GiveReward();
+        Debug.Log(teleporter.GetComponentInChildren<Teleporter>());
+        teleporter.GetComponentInChildren<Teleporter>().enabled = true;
     }
 }
