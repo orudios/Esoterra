@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Esoterra.unity
     guid: 80a7b5808b43ae245bc2c97ce3cfc017
   - enabled: 1
-    path: Assets/Scenes/GameOverScene.unity
+    path: Assets/Scenes/Game Over.unity
     guid: 2b9ffa0edb776bd44b0679c7e3ac7dd9
   - enabled: 0
     path: Assets/Scenes/new-enemy-scene.unity
