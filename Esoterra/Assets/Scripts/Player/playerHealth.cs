@@ -14,7 +14,10 @@ public class playerHealth : MonoBehaviour
         //Debug.Log(health);
         if (health <= 0f)
         {
+            Cursor.lockState = CursorLockMode.None;
+            
             SceneManager.LoadScene("GameOverScene",LoadSceneMode.Single);
+            //Cursor.visible = true;
         }
     }
     
