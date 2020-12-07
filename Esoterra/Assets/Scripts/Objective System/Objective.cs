@@ -15,8 +15,8 @@ public class Objective : MonoBehaviour
     public string[] NotCompletedDialogue {get; set;} = new string[]{
         "You haven't completed the objective.",
         "Here's your progress right now..."};
-    public string[] JustCompletedDialogue {get; set;} = {"You have completed the objective!"};
-    public string[] CompletedDialogue {get; set;} = {"You have already completed this objective."};
+    public string[] HandInDialogue {get; set;} = {"You have completed the objective!"};
+    public string[] AlreadyCompletedDialogue {get; set;} = {"You have already completed this objective."};
 
     public bool Completed {get; set;}
 

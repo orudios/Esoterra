@@ -19,7 +19,7 @@ public class Goal
 
     public void CheckGoalComplete()
     {
-        if (RequiredAmount >= CurrentAmount) {
+        if (CurrentAmount >= RequiredAmount) {
             Complete();
         }
     }

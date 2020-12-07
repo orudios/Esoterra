@@ -13,7 +13,7 @@ public class WhatsThis : Objective
         Name = "What's this?";
         Description = "Find some materials.";
         Goals.Add(new ResourceGoal(this, 1, 2, "Collect 1 Aluminium.", 0, false));
-        Goals.Add(new ResourceGoal(this, 1, 5, "Collect 1 Copper.", 0, false));
+        Goals.Add(new ResourceGoal(this, 2, 5, "Collect 2 Copper.", 0, false));
         foreach (Goal g in Goals) {
             g.Init();
         }
