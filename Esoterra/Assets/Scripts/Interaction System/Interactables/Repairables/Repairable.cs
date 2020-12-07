@@ -14,7 +14,7 @@ public class Repairable : Interactable
 
     // To be displayed in the body of the repair UI
     string bodyString;
-    bool broken;
+    [HideInInspector] public bool broken;
 
     // Audio
     AudioSource audioRepair;
@@ -61,9 +61,13 @@ public class Repairable : Interactable
     public override void Start()
     {
         base.Start();
-        repairManager = GameObject.Find("UI/Canvas/TextMenu").GetComponent<RepairManager>();
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
-    }
+        repairManager =
+            GameObject.Find("UI/Canvas/TextMenu")
+            .GetComponent<RepairManager>();
+        inventory =
+            GameObject.FindGameObjectWithTag("Player")
+            .GetComponentInChildren<Inventory>();
+        }
 
     // Update based on required Resources and quantities
     void UpdateBodyString()
@@ -105,6 +109,9 @@ public class Repairable : Interactable
 
     public virtual void Repair()
     {
+        // Subtype should tell EventManager its specific type
+        // EventManager.Repaired("Repairable");
+
         broken = false;
 
         if (audioRepair != null) {

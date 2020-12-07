@@ -21,7 +21,9 @@ public class Resource : Interactable
     public override void Start()
     {
         base.Start();
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
+        inventory =
+            GameObject.FindGameObjectWithTag("Player")
+            .GetComponentInChildren<Inventory>();
     }
 
     public override void Interact()

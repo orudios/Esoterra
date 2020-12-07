@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class RepairGoal : Goal
+public class ResourceGoal : Goal
 {
-    public string TrackingRepairType {get; set;}
+    public int TrackingResourceID {get; set;}
 
 
-    public RepairGoal(Objective objective, int requiredAmount, string trackingRepairType, string description, int currentAmount, bool completed)
+    public ResourceGoal(Objective objective, int requiredAmount, int trackingResourceID, string description, int currentAmount, bool completed)
     {
         this.Objective = objective;
         this.RequiredAmount = requiredAmount;
-        this.TrackingRepairType = trackingRepairType;
+        this.TrackingResourceID = trackingResourceID;
         this.Description = description;
         this.CurrentAmount = currentAmount;
         this.Completed = completed;
@@ -21,12 +21,12 @@ public class RepairGoal : Goal
     public override void Init()
     {
         base.Init();
-        EventManager.OnRepair += Repaired;
+        EventManager.OnResourceCollect += ResourceCollected;
     }
 
-    public void Repaired(string repairableType)
+    public void ResourceCollected(int resID)
     {
-        if (repairableType == this.TrackingRepairType) {
+        if (resID == this.TrackingResourceID) {
             this.CurrentAmount++;
             CheckGoalComplete();
         }
