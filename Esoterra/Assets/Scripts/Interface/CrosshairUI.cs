@@ -10,12 +10,12 @@ public class CrosshairUI : MonoBehaviour
     public Image crosshair;
 
     // Other
-    PlayerController playerController;
+    PlayerRaycasting playerController;
     GameObject lookingAtObj;
 
     void Start()
     {
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerRaycasting>();
     }
 
     void Update()

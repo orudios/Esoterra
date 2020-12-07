@@ -21,7 +21,7 @@ public class Interactable : MonoBehaviour
 
     [HideInInspector] public string interactKey = "e";
     [HideInInspector] public AudioSource[] audioSources;
-    [HideInInspector] public PlayerController playerController;
+    [HideInInspector] public PlayerRaycasting playerController;
 
 
     public virtual void Awake()
@@ -32,7 +32,7 @@ public class Interactable : MonoBehaviour
     
     public virtual void Start()
     {
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerRaycasting>();
 	}
 
     void Update()

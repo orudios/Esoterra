@@ -8,7 +8,7 @@ public class SceneFader : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetKeyDown("f1"))
         {
             FadeToNextLevel();
         }
