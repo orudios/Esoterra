@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 7164d3f2899930340835cccdd949a0fd
+=======
+<<<<<<< HEAD:Esoterra/Assets/Third Party Assets/Low Poly Space Rocks/Components/Textures/Texture.png.meta
+guid: 3228455e5ac8cad428b65451a794ddea
+=======
 guid: 20e9b706df6a58d48beae5523724622d
+>>>>>>> main:Esoterra/Assets/Third Party Assets/Runestone/textures/Runestone diffusePSD.psd.meta
+>>>>>>> main
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -28,7 +36,11 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
+<<<<<<< HEAD
+  textureFormat: 1
+=======
   textureFormat: -1
+>>>>>>> main
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
@@ -59,7 +71,11 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
+<<<<<<< HEAD
+  applyGammaDecoding: 0
+=======
   applyGammaDecoding: 1
+>>>>>>> main
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform

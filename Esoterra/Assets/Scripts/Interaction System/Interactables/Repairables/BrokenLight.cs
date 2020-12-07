@@ -5,6 +5,14 @@ using UnityEngine;
 
 public class BrokenLight : Repairable
 {
+    // The light source to turn on
+    Light myLight;
+
+    // Materials for light when off and on
+    Material baseMaterial;
+    Material lightMaterial;
+
+
     public override void Reset()
     {
         base.Reset();
@@ -14,10 +22,29 @@ public class BrokenLight : Repairable
         continuousAudioWhenBroken = true;
     }
 
+    public override void Awake()
+    {
+        base.Awake();
+
+        // Get own components
+        myLight = gameObject.transform.GetChild(0).GetComponent<Light>();
+        baseMaterial = gameObject.GetComponent<MeshRenderer>().materials[0];
+        lightMaterial = gameObject.GetComponent<MeshRenderer>().materials[1];
+    }
+
     public override void Repair()
     {
         EventManager.Repaired("BrokenLight");
-        gameObject.GetComponent<FlickeringLight>().enabled = false;
+
+        // Disable flickering script
+        gameObject.GetComponent<LightFlicker>().enabled = false;
+
+        // Enable lights
+        myLight.enabled = true;
+        gameObject.GetComponent<MeshRenderer>().materials = new Material[]{
+            baseMaterial, lightMaterial
+        };
+
         base.Repair();
     }
 }
