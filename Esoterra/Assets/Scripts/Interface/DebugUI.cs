@@ -8,7 +8,7 @@ public class DebugUI : MonoBehaviour
 {
     Text[] childrenText;
 
-    PlayerController playerController;
+    PlayerRaycasting playerController;
     Inventory inventory;
 
 
@@ -21,7 +21,7 @@ public class DebugUI : MonoBehaviour
     {
         playerController =
             GameObject.FindGameObjectWithTag("Player")
-            .GetComponent<PlayerController>();
+            .GetComponent<PlayerRaycasting>();
 	    inventory =
             GameObject.FindGameObjectWithTag("Player")
             .GetComponentInChildren<Inventory>();
