@@ -8,15 +8,13 @@ public class GunController : MonoBehaviour
     public Camera fpsCamera;
     public ParticleSystem muzzleFlash;
 
-    public GameOver gameOver;
-
     private AudioSource gunShot;
     void Start(){
         gunShot = gameObject.GetComponent<AudioSource>();
     }
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && gameOver.gameOver==false)
+        if (Input.GetButtonDown("Fire1"))
         {
             ShootWeapon();
         }
