@@ -332,7 +332,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201577802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.0000005, y: 0.75, z: -6}
+  m_LocalPosition: {x: -10.92, y: 0.75, z: -5.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 730228790}
@@ -550,6 +550,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7070073484291801422, guid: d5019ea9f51ecf143a3fbc26d61a069a, type: 3}
   m_PrefabInstance: {fileID: 456493025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &380949180 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 940902748751498892, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
+  m_PrefabInstance: {fileID: 863273935}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &399867076 stripped
 MonoBehaviour:
@@ -1243,7 +1248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4727691571689539586, guid: cc79ecc6c7facbf4eb3d83943d7a5cd8, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4727691571689539586, guid: cc79ecc6c7facbf4eb3d83943d7a5cd8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1492,7 +1497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695947163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.61, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 1075491263}
@@ -1682,7 +1687,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730228789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.439096, y: 0, z: -1.2435951}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 201577803}
@@ -1713,15 +1718,15 @@ MonoBehaviour:
   - In the storage room lies the Blue Matter compressor. It compresses and extracts
     the energy bound inside the matter and uses it as power for the advanced technologies
     here on Olympus.
-  - It became unfunctional after Olympus was damaged. If it were to be repaired,
-    I can command the compressor and direct the pwoer flow to the teleporter in the
+  - The compressor ceased to function after Olympus was damaged. If it were to be
+    repaired, I could command it and direct the power flow to the teleporter in the
     Bridge.
   - There is a chance the second teleporter which crashed onto Esoterra remains functional...
   - If this is the case...
   - This could be your gateway to Esoterra.
   nextButtonFinalString: Leave
   dialogueManager: {fileID: 0}
-  objectiveScript: 
+  objectiveScript: GatewayToEsoterra
 --- !u!65 &730228792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2122,6 +2127,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4727691571689539586, guid: cc79ecc6c7facbf4eb3d83943d7a5cd8, type: 3}
   m_PrefabInstance: {fileID: 610334836}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &863273935
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1418778684}
+    m_Modifications:
+    - target: {fileID: 940902748751498892, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.7519808
+      objectReference: {fileID: 0}
+    - target: {fileID: 940902748751498892, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00064253807
+      objectReference: {fileID: 0}
+    - target: {fileID: 940902748751498892, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.697258
+      objectReference: {fileID: 0}
+    - target: {fileID: 940902748751498892, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940902748751498892, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940902748751498892, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940902748751498892, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 940902748751498892, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 940902748751498892, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940902748751498892, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940902748751498892, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940902748751498893, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
+      propertyPath: m_Name
+      value: Copper
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1accf2ee2509bc54da9bb3a2a9bcc33e, type: 3}
 --- !u!4 &869950565 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3998743004375948402, guid: 15ec843575ad3fc4188983aae2b521d2, type: 3}
@@ -2480,7 +2542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075491262}
   m_LocalRotation: {x: -0, y: -0.13614787, z: -0, w: 0.99068856}
-  m_LocalPosition: {x: -6.0000005, y: 0.75, z: -9}
+  m_LocalPosition: {x: -9.92, y: 0.75, z: -10.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 695947164}
@@ -2654,7 +2716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3816962233860101670, guid: 51290e0589d76a14a88205b8b1119a3c, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3816962233860101670, guid: 51290e0589d76a14a88205b8b1119a3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3065,6 +3127,7 @@ Transform:
   m_Children:
   - {fileID: 762253115}
   - {fileID: 775181498}
+  - {fileID: 380949180}
   - {fileID: 1146211209}
   - {fileID: 853208323}
   - {fileID: 2125222618}
@@ -4184,7 +4247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7103729831538598905, guid: 7c6a97aec58437143bcc29b734fee56b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7103729831538598905, guid: 7c6a97aec58437143bcc29b734fee56b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

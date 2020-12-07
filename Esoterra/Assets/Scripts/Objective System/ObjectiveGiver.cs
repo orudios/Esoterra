@@ -52,7 +52,7 @@ public class ObjectiveGiver : DialogueUser
         else {
             if (HasAudio()) audioSources[0].Play();
             dialogueManager.AddNewDialogue(
-                displayName, MyObjective.CompletedDialogue, nextButtonFinalString
+                displayName, MyObjective.AlreadyCompletedDialogue, nextButtonFinalString
             );
         }
     }
@@ -74,7 +74,7 @@ public class ObjectiveGiver : DialogueUser
             MyObjective.GiveReward();
             dialogueManager.AddNewDialogue(
                 displayName,
-                MyObjective.JustCompletedDialogue,
+                MyObjective.HandInDialogue,
                 nextButtonFinalString
             );
 
