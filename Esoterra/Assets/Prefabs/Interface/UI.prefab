@@ -1673,6 +1673,7 @@ MonoBehaviour:
   displayName: 
   dialoguePosition: 0
   nextButtonFinalString: 
+  inDialogue: 0
 --- !u!114 &602158415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2295,6 +2296,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8292472202262478968}
     m_Modifications:
+    - target: {fileID: 2040378795885641249, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5ddf6ed35067ba44e8ba7d3c924621e3, type: 3}
+    - target: {fileID: 2040378795885641249, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2040378795885641253, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
       propertyPath: m_Name
       value: Iron Display
@@ -2413,6 +2422,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8292472202262478968}
     m_Modifications:
+    - target: {fileID: 2040378795885641249, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f5a05243f94449545a5e9a1e8a0f420f, type: 3}
+    - target: {fileID: 2040378795885641249, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2040378795885641253, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
       propertyPath: m_Name
       value: Blue Matter Display
@@ -2531,6 +2548,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8292472202262478968}
     m_Modifications:
+    - target: {fileID: 2040378795885641249, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3872d5cf0307599408ba368f12a373a7, type: 3}
+    - target: {fileID: 2040378795885641249, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2040378795885641253, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
       propertyPath: m_Name
       value: Copper Display
@@ -2661,6 +2686,14 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2040378795885641249, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a0e712b333eae6348b1bb56eefa7e69d, type: 3}
+    - target: {fileID: 2040378795885641249, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2040378795885641253, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
       propertyPath: m_Name
       value: Carbon Display
@@ -2771,6 +2804,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8292472202262478968}
     m_Modifications:
+    - target: {fileID: 2040378795885641249, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f94346584e9fe95499287d6e50104320, type: 3}
+    - target: {fileID: 2040378795885641249, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2040378795885641253, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
       propertyPath: m_Name
       value: Aluminium Display
@@ -2889,6 +2930,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8292472202262478968}
     m_Modifications:
+    - target: {fileID: 2040378795885641249, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 355f203e795f3ca4d94d852e0544cad3, type: 3}
+    - target: {fileID: 2040378795885641249, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2040378795885641253, guid: b5a642831df7ecd4f968d938e8bfbbeb, type: 3}
       propertyPath: m_Name
       value: Silicon Display
