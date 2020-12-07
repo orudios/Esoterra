@@ -22,12 +22,4 @@ public class Teleporter : Repairable
         base.Repair();
         activateOnRepair.gameObject.SetActive(true);
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-        // Player walked into the teleporter after repairing it
-        if (!broken && other.gameObject.CompareTag("Player")){
-            Debug.Log("ESOTERRA, BABY!");
-        }
-    }
 }

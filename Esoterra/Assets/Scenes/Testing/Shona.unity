@@ -305,7 +305,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2114491238}
-  - {fileID: 753293570981379859}
+  - {fileID: 5344503826207334029}
   m_Father: {fileID: 1682818845}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4268,11 +4268,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 680e15d5ee458894bbb40a14ef908559, type: 3}
---- !u!4 &753293570981379859 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
-  m_PrefabInstance: {fileID: 1118106346674278410}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1066582362084517180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4330,63 +4325,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84f74a8aafde4534d9bdb337c9433e78, type: 3}
---- !u!1001 &1118106346674278410
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 128033784}
-    m_Modifications:
-    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -22
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170286976478851200, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
-      propertyPath: m_Name
-      value: Teleporter (Olympus)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
 --- !u!1001 &2068900902283598166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4501,6 +4439,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e8b43b74a54d844a1ef2ec65346e27, type: 3}
+--- !u!1001 &2654998800991314703
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 128033784}
+    m_Modifications:
+    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170286976478851200, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
+      propertyPath: m_Name
+      value: Teleporter (Olympus)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
 --- !u!1001 &3192853316471908555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4672,6 +4667,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6680bf2a4912ec04fb42fb1b0b75134a, type: 3}
+--- !u!4 &5344503826207334029 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5021287246241500807, guid: 83f203bed73b3574da60a9814d459e38, type: 3}
+  m_PrefabInstance: {fileID: 2654998800991314703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5599697018984431468
 PrefabInstance:
   m_ObjectHideFlags: 0
