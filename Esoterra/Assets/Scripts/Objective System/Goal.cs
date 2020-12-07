@@ -6,18 +6,20 @@ using UnityEngine;
 public class Goal
 {
     public Objective Objective {get; set;}
-    
     public string Description {get; set;}
-    public int RequiredAmount {get; set;}
     public int CurrentAmount {get; set;}
+    public int RequiredAmount {get; set;}
     public bool Completed {get; set;}
 
-    public virtual void Create(){}
 
-    public void CheckGoalCompleted()
+    public virtual void Init()
     {
-        if (RequiredAmount >= CurrentAmount)
-        {
+        // EventManager.event += CurrentAmount++ method of Goal subtype
+    }
+
+    public void CheckGoalComplete()
+    {
+        if (CurrentAmount >= RequiredAmount) {
             Complete();
         }
     }
@@ -25,7 +27,6 @@ public class Goal
     public void Complete()
     {
         Completed = true;
-        Debug.Log(Objective.ID + " goal completed: " + Description);
         Objective.CheckGoalsCompleted();
     }
 }
