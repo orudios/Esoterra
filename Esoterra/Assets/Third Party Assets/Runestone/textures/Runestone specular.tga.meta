@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: fabb2dc1aa03a8c418825a5454c3ece0
+=======
+<<<<<<< HEAD:Esoterra/Assets/Third Party Assets/Runestone/textures/Runestone diffuse.tga.meta
+guid: 8ade4f6de6b911f4483c2888c54c0b0c
+=======
 guid: 6d357e7d55f3a554a980c1e02dc0465a
+>>>>>>> main:Esoterra/Assets/Third Party Assets/Runestone/textures/Runestone specular.tga.meta
+>>>>>>> main
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -28,7 +36,15 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
+<<<<<<< HEAD
+  textureFormat: 1
+=======
+<<<<<<< HEAD:Esoterra/Assets/Third Party Assets/Runestone/textures/Runestone diffuse.tga.meta
+  textureFormat: 1
+=======
   textureFormat: -1
+>>>>>>> main:Esoterra/Assets/Third Party Assets/Runestone/textures/Runestone specular.tga.meta
+>>>>>>> main
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
@@ -59,7 +75,11 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
+<<<<<<< HEAD
+  applyGammaDecoding: 0
+=======
   applyGammaDecoding: 1
+>>>>>>> main
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
