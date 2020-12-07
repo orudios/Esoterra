@@ -12,6 +12,8 @@ public class ObjectiveGiver : DialogueUser
     [Header("Objective Giver Details")]
     [Tooltip("Objective script (class name) to give to player.")]
     public string objectiveScript;
+    [Tooltip("Audio clip to use after the first interaction has been done.")]
+    public AudioClip nextAudioClip;
 
     // Object in the hierarchy which stores the player's objectives
     GameObject playerObjectives;
@@ -42,17 +44,24 @@ public class ObjectiveGiver : DialogueUser
             GiveObjective();
         }
 
+        // Change audio after interacting for the first time
+
         // Have interacted, but not completed the objective
         else if (Given && !Completed) {
+            audioSources[0].clip = nextAudioClip;
             if (HasAudio()) audioSources[0].Play();
             CheckObjective();
         }
 
         // Have interacted and completed the objective
         else {
+            audioSources[0].clip = nextAudioClip;
             if (HasAudio()) audioSources[0].Play();
+
             dialogueManager.AddNewDialogue(
-                displayName, MyObjective.AlreadyCompletedDialogue, nextButtonFinalString
+                displayName,
+                MyObjective.AlreadyCompletedDialogue,
+                nextButtonFinalString
             );
         }
     }
@@ -72,6 +81,7 @@ public class ObjectiveGiver : DialogueUser
         if (MyObjective.Completed) {
             Completed = true;
             MyObjective.GiveReward();
+
             dialogueManager.AddNewDialogue(
                 displayName,
                 MyObjective.HandInDialogue,
@@ -82,7 +92,7 @@ public class ObjectiveGiver : DialogueUser
         } else {
             dialogueManager.AddNewDialogue(
                 displayName,
-                // Use GoalsStrings to get player's up to date progress on the Objective
+                // Use GoalsStrings to get player's up to date progress
                 MyObjective.GoalsStrings(MyObjective.NotCompletedDialogue),
                 nextButtonFinalString
             );

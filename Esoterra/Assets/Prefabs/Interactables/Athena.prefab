@@ -5313,7 +5313,7 @@ GameObject:
   - component: {fileID: 6535389069135385587}
   - component: {fileID: 6535389069154844618}
   - component: {fileID: 6535389069135385585}
-  - component: {fileID: 1420978969}
+  - component: {fileID: 1947626430}
   m_Layer: 0
   m_Name: ATH-3-NA
   m_TagString: Interactable
@@ -5391,7 +5391,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 225a05710d0d7e54d8ef4290839351f6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.7
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5475,7 +5475,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1420978969
+--- !u!114 &1947626430
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5484,7 +5484,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6535389069135385550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5998d53a2f2bff4ebfc2bba91ce4500, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f50f68ab3b7bc5429a75356c0115ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: ATH-3-NA
@@ -5513,6 +5513,8 @@ MonoBehaviour:
     Compromised.'
   nextButtonFinalString: Leave
   dialogueManager: {fileID: 0}
+  objectiveScript: GatewayToEsoterra
+  nextAudioClip: {fileID: 8300000, guid: 2f51791557d907d4a8fff6b05b0d948f, type: 3}
 --- !u!1 &6535389069135389216
 GameObject:
   m_ObjectHideFlags: 0
