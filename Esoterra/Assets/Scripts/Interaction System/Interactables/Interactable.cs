@@ -80,9 +80,11 @@ public class Interactable : MonoBehaviour
     // Check if the player is within range of this interactable
     public bool PlayerInRange()
     {
-        float playerDistance = playerController.DistanceTo(gameObject);
-        if (playerDistance <= interactionDistance) {
-            return true;
+        if (playerController) {
+            float playerDistance = playerController.DistanceTo(gameObject);
+            if (playerDistance <= interactionDistance) {
+                return true;
+            }
         }
         return false;
     }
