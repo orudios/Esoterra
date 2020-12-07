@@ -1,6 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 88b200775c638d7458c784a5302c6344
 timeCreated: 1513109868
+=======
+<<<<<<< HEAD:Esoterra/Assets/Third Party Assets/Winter Zone Mini 1.0/Textures/Rock_2.png.meta
+guid: 65d5c70d8c166384085bec5e3f3a698e
+timeCreated: 1513109842
+=======
+guid: 88b200775c638d7458c784a5302c6344
+timeCreated: 1513109868
+>>>>>>> main:Esoterra/Assets/Third Party Assets/Winter Zone Mini 1.0/Textures/Rock_1.png.meta
+>>>>>>> main
 licenseType: Store
 TextureImporter:
   fileIDToRecycleName: {}
