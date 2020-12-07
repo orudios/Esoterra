@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
-    guid: 7c5c657b28847fb41bb95f2ffb1a4903
+    path: Assets/Scenes/Main Menu Room.unity
+    guid: 65da4ea6d823bd648b7f729ffd4a65eb
   - enabled: 1
     path: Assets/Scenes/Olympus.unity
     guid: add465d00eaa47441b29d8fe7457e6e5
