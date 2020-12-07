@@ -204,10 +204,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b171e8f7b36113149874007a889254be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _light: {fileID: 1602152948099547015}
+  myLight: {fileID: 1602152948099547015}
   minFlickerTime: 0.1
   maxFlickerTime: 0.3
-  flickerTimer: 0
 --- !u!114 &1602152949231807396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +231,7 @@ MonoBehaviour:
   requiredResources: 0500000002000000
   requiredQuantity: 0100000001000000
   continuousAudioWhenBroken: 1
+  broken: 0
   repairManager: {fileID: 0}
 --- !u!1 &1602152949430199137
 GameObject:
@@ -243,7 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1602152949430199138}
   m_Layer: 0
-  m_Name: Wall Light
+  m_Name: Wall Light 1 Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
