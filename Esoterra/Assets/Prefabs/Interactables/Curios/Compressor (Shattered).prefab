@@ -35,11 +35,10 @@ MonoBehaviour:
   audioSources: []
   playerController: {fileID: 0}
   dialogueStrings:
-  - Coated in snow lies the shattered core of a Blue Matter compressor.
-  - The compressor on Olympus is fixed, but this one looks beyond repair.
-  - The chaotic weather system on Esoterra is far too harsh for much to survive out
-    here. It's lucky that the teleporter even worked.
-  - Won't be doing any compressing out here, then!
+  - Coated in snow lies the shattered core of a Blue Matter Compressor.
+  - The compressor on Olympus is fixed now, but this one might be beyond repair.
+  - The weather system on Esoterra is too harsh for much to survive out here. It's
+    lucky that the teleporter even worked.
   nextButtonFinalString: Leave
   dialogueManager: {fileID: 0}
 --- !u!1 &6217900806145631948
