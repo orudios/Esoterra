@@ -14,9 +14,15 @@
 
 ### Audio
 - [ATH-3-NA Voice](https://texttospeechrobot.com/texttospeechdownloadmp3.html)
+- [bronze object in wind 140816_0376.wav](https://freesound.org/people/klankbeeld/sounds/248228/)
+- [Commercial Oven Door Mechanism and Open Close.wav](https://freesound.org/people/lolamadeus/sounds/217176/)
+- [https://freesound.org/people/tgfcoder/sounds/146950/](https://freesound.org/people/tgfcoder/sounds/146950/)
 - [Décompression.wav](https://freesound.org/people/davidou/sounds/88495/)
 - [freeSFX](https://freesfx.co.uk/Default.aspx)
 - [KenneyNL](https://kenney.nl/assets?q=audio)
+- [Reverse Door Slam.wav](https://freesound.org/people/MegaBlasterRecordings/sounds/366886/)
+- [Space_Atmosphere_04.wav](https://freesound.org/people/MATRIXXX_/sounds/396625/)
+- [WinterSolsticeNight.wav](https://freesound.org/people/daveincamas/sounds/65247/)
 
 ### Fonts
 - [Nasalization](https://www.dafont.com/nasalization.font)
