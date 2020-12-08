@@ -11,10 +11,10 @@ public class TransformRotate : MonoBehaviour
     public float xAxisSpeed = 0f;
     [Tooltip("How fast to rotate around the y axis.")]
     [Range(-180f, 180f)]
-    public float yAxisSpeed = 20f;
+    public float yAxisSpeed = 0f;
     [Tooltip("How fast to rotate around the z axis.")]
     [Range(-180f, 180f)]
-    public float zAxisSpeed = 0f;
+    public float zAxisSpeed = 20f;
 
 
     void Update()
