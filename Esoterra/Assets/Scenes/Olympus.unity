@@ -9488,6 +9488,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2068900901813829361, guid: 531fea2f6b3e9af49bee382e3f786274, type: 3}
+      propertyPath: open
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2215530752197959891, guid: 531fea2f6b3e9af49bee382e3f786274, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
@@ -17026,6 +17030,10 @@ PrefabInstance:
     - target: {fileID: 4685802721238513018, guid: 343293527a6c0194f8753aaa987e7958, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685802721238516834, guid: 343293527a6c0194f8753aaa987e7958, type: 3}
+      propertyPath: open
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4685802721238669708, guid: 343293527a6c0194f8753aaa987e7958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37613,6 +37621,10 @@ PrefabInstance:
     - target: {fileID: 4685802721238513018, guid: 343293527a6c0194f8753aaa987e7958, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685802721238516834, guid: 343293527a6c0194f8753aaa987e7958, type: 3}
+      propertyPath: open
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4685802721238669708, guid: 343293527a6c0194f8753aaa987e7958, type: 3}
       propertyPath: m_LocalPosition.x
@@ -65317,7 +65329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBody: {fileID: 4280682688211549691}
-  mouseSensitivity: 70
+  mouseSensitivity: 200
 --- !u!114 &4280682687897932410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65380,7 +65392,7 @@ GameObject:
   - component: {fileID: 4280682688211549689}
   - component: {fileID: 4280682688211549690}
   m_Layer: 12
-  m_Name: Player Esoterra
+  m_Name: Player Olympus
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
