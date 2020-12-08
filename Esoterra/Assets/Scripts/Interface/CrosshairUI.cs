@@ -43,10 +43,6 @@ public class CrosshairUI : MonoBehaviour
             {
                 crosshair.color = new Color32(0, 230, 255, 255);
             }
-            else if (lookingAtObj.CompareTag("Enemy"))
-            {
-                crosshair.color = new Color32(255, 90, 25, 255);
-            }
             else
             {
                 crosshair.color = Color.white;

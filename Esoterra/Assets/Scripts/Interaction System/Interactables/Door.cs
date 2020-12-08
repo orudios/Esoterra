@@ -101,7 +101,7 @@ public class Door : Interactable
         return closestIndex;
     }
 
-    // For doors, player must look at outlineObject (DoorTargetArea) rather than gameObject
+    // For doors, player must look at DoorTargetArea rather than gameObject
     public override bool CanInteract()
     {
         if (PlayerInRange() && playerController.LookingAt() == outlineObject) {
