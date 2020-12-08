@@ -22,6 +22,7 @@
 - [KenneyNL](https://kenney.nl/assets?q=audio)
 - [Reverse Door Slam.wav](https://freesound.org/people/MegaBlasterRecordings/sounds/366886/)
 - [Space_Atmosphere_04.wav](https://freesound.org/people/MATRIXXX_/sounds/396625/)
+- [The Invasion (Atmospheric/Title Screen, Sci-Fi)](https://assetstore.unity.com/packages/audio/music/the-invasion-atmospheric-title-screen-sci-fi-95819)
 - [WinterSolsticeNight.wav](https://freesound.org/people/daveincamas/sounds/65247/)
 
 ### Fonts
@@ -48,5 +49,4 @@
 
 ### Miscellaneous
 - [NavMeshComponents](https://github.com/Unity-Technologies/NavMeshComponents)
-- [Sci-Fi Weapons](https://devassets.com/assets/sci-fi-weapons/)
 - [Json.Net.Unity3D](https://github.com/SaladLab/Json.Net.Unity3D)
