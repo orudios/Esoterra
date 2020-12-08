@@ -6,18 +6,19 @@ using UnityEngine;
 public class TransformRotate : MonoBehaviour
 {
     [Header("Rotation Details")]
-    [Tooltip("How fast to rotate on the x axis.")]
-    [Range(0f, 180f)]
-    public float speedXAxis = 0f;
-    [Tooltip("How fast to rotate on the y axis.")]
-    [Range(0f, 180f)]
-    public float speedYAxis = 0f;
-    [Tooltip("How fast to rotate on the z axis.")]
-    [Range(0f, 180f)]
-    public float speedZAxis = 20f;
+    [Tooltip("How fast to rotate around the x axis.")]
+    [Range(-180f, 180f)]
+    public float xAxisSpeed = 0f;
+    [Tooltip("How fast to rotate around the y axis.")]
+    [Range(-180f, 180f)]
+    public float yAxisSpeed = 20f;
+    [Tooltip("How fast to rotate around the z axis.")]
+    [Range(-180f, 180f)]
+    public float zAxisSpeed = 0f;
+
 
     void Update()
     {
-        transform.Rotate(new Vector3(speedXAxis, speedYAxis, speedZAxis) * Time.deltaTime);
+        transform.Rotate(new Vector3(xAxisSpeed, yAxisSpeed, zAxisSpeed) * Time.deltaTime);
     }
 }
