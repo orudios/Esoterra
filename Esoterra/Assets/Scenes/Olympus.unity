@@ -65342,8 +65342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5252e7740e4ef42a7eb64edf9c0085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  solidColourShader: {fileID: 4800000, guid: f1e2396794b54104299eaa5af6fa7f0b, type: 3}
-  outlineShader: {fileID: 4800000, guid: 916c953c30ceb8c4a801bd50f9f658f7, type: 3}
 --- !u!1 &4280682687897932411
 GameObject:
   m_ObjectHideFlags: 0
@@ -65458,7 +65456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4280682688211549684}
   m_LocalRotation: {x: -0, y: 0.51334673, z: -0, w: 0.85818136}
-  m_LocalPosition: {x: 3.421658, y: 1.792, z: -21.286041}
+  m_LocalPosition: {x: -58.24, y: 1.792, z: -37.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4280682687897932415}
