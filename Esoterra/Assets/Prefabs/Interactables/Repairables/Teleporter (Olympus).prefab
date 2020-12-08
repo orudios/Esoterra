@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1118106345715175465}
   - component: {fileID: 1118106345715175470}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1118106345715175465
 Transform:
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 5157778305380809629}
   - component: {fileID: 7323158810439887477}
   - component: {fileID: 6947375639164508726}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: column
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,12 +197,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2654998801189380908}
   - component: {fileID: 2654998801189380907}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2654998801189380908
 Transform:
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 7838550959805286552}
   - component: {fileID: 5691752476119079280}
   - component: {fileID: 5419578361122384179}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: column
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,12 +385,12 @@ GameObject:
   - component: {fileID: 5754209060371644217}
   - component: {fileID: 5754209060371644219}
   - component: {fileID: 5754209060371644218}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TeleportTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5754209060371644217
 Transform:
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 5794185234639641984}
   - component: {fileID: 7291220183001540971}
   - component: {fileID: 1296029591025420936}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ceiling_projector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 5639967694661700693}
   - component: {fileID: 6743801831453001942}
   - component: {fileID: 2203882827275489193}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: column
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,12 +635,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7126808123402668493}
   - component: {fileID: 7126808123402668492}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7126808123402668493
 Transform:
@@ -730,12 +730,12 @@ GameObject:
   - component: {fileID: 7126808123834545803}
   - component: {fileID: 890529052}
   - component: {fileID: 890529053}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Structure
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7126808123834545800
 Transform:
@@ -998,12 +998,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7126808124193177188}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ActivateOnRepair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 0
 --- !u!4 &7126808124193177188
 Transform:
@@ -1036,12 +1036,12 @@ GameObject:
   - component: {fileID: 7126808124951256434}
   - component: {fileID: 7126808124951256435}
   - component: {fileID: 7126808124951256432}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7126808124951256433
 Transform:
@@ -5861,7 +5861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5021287246241500807}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Teleporter (Olympus)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5875,7 +5875,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7170286976478851200}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -22, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5897,7 +5897,7 @@ GameObject:
   - component: {fileID: 1531780714094294495}
   - component: {fileID: 3542431345097462831}
   - component: {fileID: 6478120252686124649}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: column
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6086,13 +6086,37 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7783500096026334179, guid: 13a7a935e50e9534aaae61f433887421, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783500096026334179, guid: 13a7a935e50e9534aaae61f433887421, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7783500096594552408, guid: 13a7a935e50e9534aaae61f433887421, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7783500096594552408, guid: 13a7a935e50e9534aaae61f433887421, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783500096594552408, guid: 13a7a935e50e9534aaae61f433887421, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7783500096988012577, guid: 13a7a935e50e9534aaae61f433887421, type: 3}
       propertyPath: m_Name
       value: World Space Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783500096988012577, guid: 13a7a935e50e9534aaae61f433887421, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783500096988012577, guid: 13a7a935e50e9534aaae61f433887421, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7783500096988012582, guid: 13a7a935e50e9534aaae61f433887421, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6140,11 +6164,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7783500096988012582, guid: 13a7a935e50e9534aaae61f433887421, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7783500096988012582, guid: 13a7a935e50e9534aaae61f433887421, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13a7a935e50e9534aaae61f433887421, type: 3}
